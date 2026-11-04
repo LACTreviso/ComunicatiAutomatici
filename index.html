@@ -172,11 +172,9 @@ dialog h3{margin:0 0 8px;color:var(--b2);font:600 20px Georgia,serif}
 <script>
 /* =====================================================================
    CONFIGURAZIONE FIREBASE  (vedi GUIDA_FIREBASE.md, passo 5)
-   Finché FIREBASE_CONFIG resta null il tool funziona in "modalità locale":
-   niente login, i dati restano solo in questo browser.
+   Progetto Firebase: comunicati-lact. Se FIREBASE_CONFIG fosse null il tool
+   funzionerebbe in "modalità locale" (niente login, dati solo nel browser).
    ===================================================================== */
-const FIREBASE_CONFIG = null;
-/* esempio:
 const FIREBASE_CONFIG = {
   apiKey: "AIzaSyDe02D1lWhXK3Zgzq6BOWjC1ndQVu5BuGI",
   authDomain: "comunicati-lact.firebaseapp.com",
@@ -185,7 +183,7 @@ const FIREBASE_CONFIG = {
   messagingSenderId: "945688955986",
   appId: "1:945688955986:web:c94258fa623673de28e38b"
 };
-*/
+
 const SUPER_ADMIN_EMAIL = "filippo.cortella5@gmail.com";   /* la tua email: al primo accesso diventa amministratore */
 const FIREBASE_SDK = "10.12.2";
 /* ===================================================================== */
