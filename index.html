@@ -54,51 +54,81 @@ details.prev .tw{max-height:260px;margin-bottom:8px}details.prev h5{margin:10px 
 .recf select.m{min-width:280px;max-width:100%}
 .recl{list-style:none;margin:8px 0 0;padding:0}.recl li{display:flex;align-items:center;gap:8px;background:var(--y);border-radius:8px;padding:4px 8px;margin:4px 0;font-size:13px}
 .recl li span{flex:1}
-/* ---------- scheda COMPONI ---------- */
-.app{display:flex;gap:18px;max-width:1340px;margin:auto;padding:16px;position:relative}
-aside{width:270px;flex:none;position:sticky;top:64px;align-self:flex-start;max-height:calc(100vh - 76px);overflow:auto;background:#ffffffe6;border:1px solid var(--ln);border-radius:12px;padding:12px}
-aside h3{margin:16px 0 6px;font-size:12px;color:var(--b2);text-transform:uppercase;letter-spacing:.06em;border-top:1px solid var(--ln);padding-top:10px}
-aside h3:first-of-type{border-top:0;padding-top:0}
-aside small{display:block;color:var(--mut);margin-top:4px;font-size:12px}
-aside ol{margin:0 0 8px;padding-left:20px}aside li{margin:3px 0;font-size:14px}aside li span{float:right}aside li span button{padding:0 5px;margin:0 0 0 1px}aside li a{color:var(--b);text-decoration:none}
-aside .hf{display:grid;grid-template-columns:52px 1fr;gap:4px 6px;align-items:center;font-size:12px;color:var(--mut)}aside .hf input{width:100%;padding:3px 6px}
-aside .qs{display:grid;grid-template-columns:1fr 1fr;gap:4px}aside .qs button{margin:0;text-align:left;font-size:12px;padding:5px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-aside .qs .w{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:4px;margin-bottom:2px}aside .qs .w select{font-size:12.5px;padding:3px;min-width:0}
+/* ---------- ② struttura ---------- */
+.ct3{margin:0 0 10px;font:600 17px Georgia,serif;color:var(--b2)}.ct3 .hint{display:inline;font:400 12px "Segoe UI",sans-serif;margin-left:8px}
+.hgrid{display:grid;grid-template-columns:86px 1fr;gap:14px;align-items:start}
+.hlogo{width:86px;height:86px;object-fit:contain;border-radius:50%;border:1px solid var(--ln);background:#fff;padding:4px}
+.frm4{display:grid;grid-template-columns:110px 150px 150px 1fr;gap:8px 12px}.frm4 label{display:flex;flex-direction:column;font-size:12px;color:var(--mut);gap:2px}.frm4 .full{grid-column:1/-1}.frm4 input{width:100%}
+.srow2{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:12px;padding-top:10px;border-top:1px solid #e4ecf6}
+.srow2 .sepv{width:1px;height:24px;background:var(--ln);margin:0 6px}
+label.f.inl{flex-direction:row;align-items:center;gap:6px;margin:0 6px 0 0}
+.spsec{border:1px solid var(--ln);border-radius:12px;margin:12px 0;background:#fbfdff;scroll-margin-top:72px}
+.sh{display:flex;align-items:center;gap:6px;padding:8px 10px;background:#eaf2fb;border-bottom:1px solid var(--ln);border-radius:12px 12px 0 0}
+.sh button{margin:0}
+.sn{width:28px;height:28px;border-radius:50%;background:var(--b);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
+.sh input.st{font:600 17px Georgia,serif;color:var(--b2);border-color:transparent;background:transparent;flex:1;min-width:180px}.sh input.st:hover,.sh input.st:focus{border-color:var(--ln);background:#fff}
+.blist{padding:4px 12px}
+.brow{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:8px 4px;border-bottom:1px dashed #d3e0ef;scroll-margin-top:80px;border-radius:8px}
+.brow:last-child{border-bottom:0}
+.bic{font-size:20px;text-align:center;line-height:30px}
+.bname{font-weight:600;color:var(--b2);font-size:14.5px}.bname small{font-weight:400;color:var(--mut);margin-left:8px;font-size:12.5px}
+.bset{display:flex;flex-wrap:wrap;align-items:flex-end;gap:2px 8px;margin-top:8px;padding:8px 10px;background:#fff;border:1px solid #dfe8f3;border-radius:9px}.bset label.f{margin:0}.bset label.ck{margin:0 4px 4px 0}.bset .grow2{flex:1 1 220px}.bset .grow2 input{width:100%}.bset button{margin-bottom:2px}
+.bset .hint{margin:0}
+.bact{display:flex;gap:3px;align-items:center;justify-content:flex-end;white-space:nowrap}.bact button{margin:0}.bact select{font-size:12px;padding:3px 4px;max-width:125px}.bact .gear.on{background:var(--b);color:#fff;border-color:var(--b)}
+.bempty{color:var(--mut);font-style:italic;padding:10px 4px;font-size:13.5px}
+.badd{padding:4px 12px 12px}.badd select{font-size:13px;color:var(--b2);border-style:dashed;background:#fff}
+.addsec{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--ln)}.addsec button{margin:0}.addsec .hint{display:inline;margin:0 4px}
+.addsec .pri{font-size:14px;padding:7px 14px}.qsw{display:inline-flex;gap:4px}.qsw select{font-size:13px;padding:3px 4px}
+.flash{animation:fl 1.8s ease-out}@keyframes fl{0%,35%{background:#fff3b0;box-shadow:0 0 0 3px #f2d64b}100%{}}
+/* ---------- ③ contenuti e anteprima ---------- */
+.app{display:flex;gap:18px;max-width:1240px;margin:auto;padding:16px;position:relative}
+aside.nav{width:210px;flex:none;position:sticky;top:64px;align-self:flex-start;max-height:calc(100vh - 76px);overflow:auto;background:#ffffffe6;border:1px solid var(--ln);border-radius:12px;padding:10px}
+.navh{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);font-weight:700;margin:2px 6px 6px}
+button.lnk{display:block;width:100%;text-align:left;border:0;background:none;padding:6px 8px;margin:1px 0;border-radius:7px;color:var(--b);font-size:14px;line-height:1.3}button.lnk:hover{background:#e6effa}
+button.lnk.in{display:inline;width:auto;padding:0;font-size:inherit;font-weight:600;text-decoration:underline}
+aside.nav .hint{margin:12px 6px 2px;font-size:12px;line-height:1.45;border-top:1px solid var(--ln);padding-top:10px}
 main{flex:1;min-width:0}
-.hd{display:flex;gap:16px;align-items:center;color:#fff;border-radius:14px;padding:16px 20px;position:relative;overflow:hidden}
+.hd{display:flex;gap:16px;align-items:center;color:#fff;border-radius:14px;padding:16px 20px;position:relative;overflow:hidden;scroll-margin-top:72px}
 .hd>svg.bg{position:absolute;inset:0;width:100%;height:100%;z-index:0}.hd>:not(svg){position:relative;z-index:1}
 .hd img{width:78px;height:78px;object-fit:contain;background:#fff;border-radius:50%;padding:4px}
 .hd h1{margin:0;font:700 27px Georgia,"Times New Roman",serif;letter-spacing:.5px}.hd p{margin:3px 0 0}.hd .s{font-size:12px;opacity:.88}
-.hd .pen{position:absolute;right:12px;top:12px}
-.hd [contenteditable=true]{background:#ffffff24!important;color:#fff!important;outline:1px dashed #ffffffbb!important}
-.sec{margin-top:22px}.sec h2{font:600 21px Georgia,serif;color:var(--b2);border-left:6px solid var(--b);padding-left:10px;margin:0 0 10px;break-after:avoid}
-.sec h2 .pen{margin-left:8px;vertical-align:middle}
-.blk{background:#ffffffd6;border:1px solid var(--ln);border-radius:10px;padding:10px 12px;margin-bottom:12px;position:relative}
-.blk.ed{box-shadow:0 0 0 2px #5b8dd055}
-.bt{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.bt h3{margin:0;font-size:16px;color:var(--b)}
-.blk h4{margin:10px 0 4px;font-size:14px;color:var(--b2)}
-.tools{text-align:right}.blk>.tools{float:right;position:relative;z-index:2}
-.tw{overflow:auto;margin-top:6px}table{border-collapse:collapse;width:100%}
-th{background:var(--b);color:#fff;text-align:left;padding:5px 9px;font-weight:600;font-size:13px}
-td{padding:4px 9px;border-bottom:1px solid var(--ln)}tr{break-inside:avoid}tbody tr:nth-child(even){background:#1d4f9111}
-th.n,td.n{text-align:center}td.c{white-space:nowrap}.lg{height:22px;width:22px;object-fit:contain;vertical-align:middle;margin-right:7px}
-tr.rec td,tbody tr.rec:nth-child(even) td{background:var(--y)}
-.rb{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.03em;background:var(--yb);color:#3a2f00;border-radius:4px;padding:0 5px;margin-left:5px;vertical-align:middle}
-.res{font-weight:700;white-space:nowrap}.pos{color:var(--mut);font-size:11px;margin-left:4px}
+.sec{margin-top:24px;scroll-margin-top:72px}.sec h2{font:600 21px Georgia,serif;color:var(--b2);border-left:6px solid var(--b);padding-left:10px;margin:0 0 10px;break-after:avoid}
+.blk{background:#fff;border:1px solid #d6e2f1;border-radius:12px;padding:12px 16px;margin-bottom:12px;position:relative}
+.blk.ed{box-shadow:0 0 0 2px #5b8dd066}
+.blk>h3{margin:0 40px 6px 0;font-size:15.5px;color:var(--b2);letter-spacing:.01em}
+.blk h4{margin:12px 0 4px;font-size:13px;color:var(--b);text-transform:uppercase;letter-spacing:.06em}
+.blk>.tools{position:absolute;top:8px;right:8px;z-index:22}
+.pen{border-radius:50%;width:30px;height:30px;padding:0;text-align:center;margin:0}.pen.on{background:var(--b);color:#fff;border-color:var(--b)}
+.edit{background:var(--soft);border:1px solid var(--ln);border-radius:9px;padding:8px 10px;margin:0 36px 10px 0}
+.edit .hint{margin:0 0 6px}.edrow{margin-top:6px}td.rowb{white-space:nowrap;background:none!important}
+.txtb.ed .rt{margin-right:38px}
+/* tabelle: stile minimal (predefinito) */
+.tw{overflow:auto;margin-top:4px}table{border-collapse:separate;border-spacing:0;width:100%;font-variant-numeric:tabular-nums}
+th{background:transparent;color:var(--b2);text-align:left;padding:6px 10px;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid var(--b)}
+td{padding:6px 10px;border:0}tr{break-inside:avoid}
+tbody tr:nth-child(even) td{background:#1d4f910b}
+th.n,td.n{text-align:center}td.c{white-space:nowrap}
+td.pos{color:var(--b);font-weight:700;width:36px}
+td.pts{font-weight:800;color:var(--b2);background:#1d4f9116!important}th.pts{background:#1d4f9116}
+.lg{height:22px;width:22px;object-fit:contain;vertical-align:middle;margin-right:8px}
+tr.rec td,tbody tr.rec:nth-child(even) td{background:var(--y)!important}
+.rb{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;background:var(--yb);color:#3a2f00;border-radius:4px;padding:0 5px;margin-left:5px;vertical-align:middle}
+.res{display:inline-block;min-width:58px;padding:2px 10px;border-radius:999px;background:#1d4f9114;color:var(--b2);font-weight:700;white-space:nowrap;text-align:center}
+.pos{color:var(--mut);font-size:11px;margin-left:4px}
 td small{display:block;color:var(--mut);font-size:11px;line-height:1.2}
+/* tabelle: stile classico */
+body.tclassic th{background:var(--b);color:#fff;font-size:13px;text-transform:none;letter-spacing:0;font-weight:600;border:0;padding:5px 9px}
+body.tclassic td{border-bottom:1px solid var(--ln);padding:4px 9px}body.tclassic tbody tr:nth-child(even) td{background:#1d4f9111}
+body.tclassic .res{background:none;padding:0;min-width:0}body.tclassic td.pts{background:none!important}body.tclassic th.pts{background:var(--b)}
 .empty{color:var(--mut);font-style:italic;margin:6px 0}
-.txt{min-height:1.4em}.txt p{margin:.4em 0}.txt h3{margin:.5em 0 .3em;color:var(--b2);font:600 18px Georgia,serif}.txt h4{margin:.5em 0 .3em;color:var(--b)}
+.txt{min-height:1.4em}.txt p{margin:.4em 0}.txt h3{margin:.5em 0 .3em;color:var(--b2);font:600 18px Georgia,serif}.txt h4{margin:.5em 0 .3em;color:var(--b);text-transform:none;letter-spacing:0;font-size:15px}
 .txt blockquote{margin:.5em 0;padding:4px 12px;border-left:4px solid var(--b);background:#1d4f910d;font-style:italic}
 [contenteditable=true]{outline:1px dashed #5b8dd0;background:#fff;border-radius:3px;min-width:1.6em;display:inline-block}.txt[contenteditable=true]{display:block;padding:6px 8px}
 th [contenteditable=true]{color:var(--ink)}
-.add{margin-top:4px}.add select{font-size:13px;color:var(--b2);border-style:dashed;background:#ffffffb0}
-.pen{border-radius:50%;width:28px;height:28px;padding:0;text-align:center}
-.idx{display:none}.idx a{display:block;color:var(--b);text-decoration:none;font-weight:600}
-.opts{background:var(--soft);border:1px solid var(--ln);border-radius:9px;padding:8px 10px;margin-bottom:8px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:2px 4px;clear:both}
-.opts .recf{flex-basis:100%;margin-top:6px}
-.opts .tag{font-size:11px;font-weight:700;color:#fff;background:var(--b);border-radius:5px;padding:2px 7px;margin-right:6px;align-self:center}
+.idx{background:#fff;border:1px solid #d6e2f1;border-radius:12px;padding:10px 16px;margin-top:14px}.idx h3{margin:0 0 6px;color:var(--b2);font:600 16px Georgia,serif}
+.idx a{display:block;color:var(--b);text-decoration:none;font-weight:600;padding:2px 0}.idx a span{display:inline-block;min-width:22px;color:var(--mut)}.idx a:hover{text-decoration:underline}
 /* ---------- editor testo ---------- */
-.rt{position:sticky;top:60px;z-index:20;display:flex;flex-wrap:wrap;gap:1px;align-items:center;background:var(--soft);border:1px solid var(--ln);border-radius:9px;padding:4px;margin:0 0 6px;clear:both}
+.rt{position:sticky;top:60px;z-index:20;display:flex;flex-wrap:wrap;gap:1px;align-items:center;background:var(--soft);border:1px solid var(--ln);border-radius:9px;padding:4px;margin:0 0 6px}
 .rt button{min-width:30px;height:30px;margin:0;padding:0 7px;border-color:transparent;background:transparent;font-size:14px}.rt button:hover{background:#dce8f8;border-color:var(--ln)}
 .rt .sep{width:1px;height:22px;background:var(--ln);margin:0 4px}
 .pw{position:relative;display:inline-block}
@@ -107,27 +137,44 @@ th [contenteditable=true]{color:var(--ink)}
 .pop .sw{width:26px;height:26px;min-width:0;border-radius:6px;border:1px solid #0003;padding:0}
 .pop .li button{display:block;width:100%;text-align:left;height:auto;padding:5px 8px}
 .pop .cust{display:flex;align-items:center;gap:6px;font-size:12px;margin-top:6px;color:var(--mut)}.pop .cust input{padding:0;width:40px;height:26px}
-/* ---------- sezioni pronte ---------- */
-.soc{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:8px}
-.sc{display:block;border:1px solid var(--ln);border-top:5px solid var(--c);border-radius:12px;background:#fff;padding:10px;text-align:center;break-inside:avoid;color:var(--ink);text-decoration:none}
-.sc .pl{font-weight:700;color:var(--c);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
-.sc .qr{margin:8px auto 6px;width:112px;height:112px}.sc .qr svg{width:100%;height:100%;display:block}
-.sc .hn{font-weight:600;font-size:13.5px;overflow-wrap:anywhere}.sc .u{font-size:10.5px;color:var(--mut);word-break:break-all}
+/* ---------- social e QR ---------- */
+.intro{margin:2px 0 10px}
+.soc{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:6px}
+.sc{flex:1 1 0;display:block;border:1px solid #d6e2f1;border-top:5px solid var(--c);border-radius:12px;background:#fff;padding:12px 10px;text-align:center;break-inside:avoid;color:var(--ink);text-decoration:none}
+.sc .pl{font-weight:700;color:var(--c);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.sc .qr{margin:8px auto 6px}.sc .qr svg{width:100%;height:100%;display:block}
+.sc .hn{font-weight:600;font-size:13.5px;overflow-wrap:anywhere}.sc .u{font-size:10.5px;color:var(--mut);overflow-wrap:anywhere}
+.q-l .sc{min-width:210px;max-width:290px}.q-l .qr{width:170px;height:170px}.q-l .hn{font-size:15px}
+.q-m .sc{min-width:160px;max-width:215px}.q-m .qr{width:128px;height:128px}
+.q-s .sc{min-width:118px;max-width:150px;padding:10px 8px}.q-s .qr{width:92px;height:92px}.q-s .pl{font-size:11.5px}.q-s .hn{font-size:12.5px}
+.noqr .sc{flex:1 1 0;min-width:150px;max-width:240px}
 .srow{display:grid;grid-template-columns:130px 1fr 1.4fr auto;gap:6px;margin:4px 0;align-items:center}
+/* ---------- collaboratori ---------- */
 .recruit{border:2px dashed var(--b);border-radius:16px;padding:18px 20px;background:linear-gradient(135deg,#ffffff,#e6effb);text-align:center;break-inside:avoid}
 .recruit .hl{font:italic 600 22px Georgia,serif;color:var(--b2);margin:0 0 10px;display:block}
 .recruit .ql{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);margin-bottom:6px}
 .roles{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:10px}.roles span{background:var(--b);color:#fff;border-radius:999px;padding:4px 13px;font-size:13.5px}
 .recruit .ct{font-size:14px}
-.spg{display:grid;gap:12px;grid-template-columns:repeat(var(--cols,2),1fr);margin-top:8px}
-.sp{border:1px solid var(--ln);border-radius:12px;background:#fff;padding:12px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;break-inside:avoid}
-.sp img.im{max-width:100%;max-height:170px;object-fit:contain}.sp .ph{width:100%;height:90px;border:2px dashed var(--ln);border-radius:8px;display:grid;place-items:center;color:var(--mut);font-size:12px}
-.sp .nm{font-weight:700;font-size:16px;color:var(--b2)}.sp .tx{font-size:13.5px;white-space:pre-line}.sp .qrs{width:72px;height:72px}.sp .qrs svg{width:100%;height:100%}
-.sp .u{font-size:11px;color:var(--mut);word-break:break-all}
-.spfull .sp img.im{max-height:330px}.spfull .sp .nm{font-size:20px}
-.spe{border:1px solid var(--ln);border-radius:10px;padding:8px;margin:6px 0;background:#fff;display:grid;grid-template-columns:110px 1fr;gap:8px}
-.spe .th{width:110px;height:80px;border:1px dashed var(--ln);border-radius:8px;display:grid;place-items:center;overflow:hidden;font-size:11px;color:var(--mut);text-align:center;cursor:pointer}
-.spe .th img{max-width:100%;max-height:100%}.spe .fl{display:grid;gap:4px}.spe .fl input,.spe .fl textarea{width:100%}
+/* ---------- sponsor ---------- */
+.spg{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:6px}
+.spg .sp{flex:0 0 calc((100% - (var(--cols) - 1) * 10px) / var(--cols));border:1px solid #dfe8f3;border-radius:10px;background:#fff;padding:8px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;break-inside:avoid}
+.spg.grid .sp{max-width:300px}.spg.cards .sp{max-width:420px;padding:12px}
+.sp .logo{width:100%;aspect-ratio:3/2;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.spg.cards .sp .logo{aspect-ratio:16/10}
+.sp .logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.sp .logo span{font-weight:700;color:var(--b2);font-size:15px;padding:6px}
+.sp .nm{font-weight:700;font-size:12.5px;color:var(--b2);line-height:1.25}.spg.cards .sp .nm{font-size:16px}
+.sp .tx{font-size:13px;white-space:pre-line}.sp .tx.sm{font-size:11px;color:var(--mut)}
+.sp .qrs{width:64px;height:64px}.sp .qrs svg{width:100%;height:100%}
+.sp .u{font-size:11px;color:var(--mut);overflow-wrap:anywhere}
+.spfull .spg.cards .sp .logo{aspect-ratio:4/3}
+.sptop{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}.sptop .hint{margin:0}
+.sphead,.spe{display:grid;grid-template-columns:66px 1fr 1fr 1.3fr auto;gap:6px;align-items:center}
+.sphead{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;padding:0 2px}
+.spe{background:#fff;border:1px solid #e1e9f4;border-radius:8px;padding:5px;margin:4px 0}.spe input{width:100%;min-width:0}
+.spe .th{width:66px;height:44px;border:1px dashed var(--ln);border-radius:6px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:11px;color:var(--mut);cursor:pointer;background:#fff}
+.spe .th img{position:absolute;inset:2px;width:calc(100% - 4px);height:calc(100% - 4px);object-fit:contain}.spb2{white-space:nowrap}.spb2 button{margin:0;padding:3px 7px}
+ol.tip{padding-left:20px;font-size:14px}ol.tip li{margin:6px 0}
 /* ---------- finestre ---------- */
 dialog{border:1px solid var(--ln);border-radius:14px;max-width:640px;width:94%;padding:18px 20px;color:var(--ink)}
 dialog::backdrop{background:#0f346655}
@@ -152,21 +199,22 @@ dialog h3{margin:0 0 8px;color:var(--b2);font:600 20px Georgia,serif}
 .gc img{width:86px;height:86px;object-fit:contain}.gc h2{margin:6px 0 2px;font:600 22px Georgia,serif;color:var(--b2)}
 .gc input{width:100%;margin:5px 0;padding:9px 10px}.gc .big{margin-top:8px}.gc a{font-size:13px;color:var(--b);cursor:pointer}
 .gc .gm{font-size:13px;margin:8px 0;color:var(--ko);white-space:pre-line}.gc .gm.ok{color:var(--ok)}
-@media(max-width:900px){.app{flex-wrap:wrap}aside{width:100%;position:static;max-height:none}.cols2{grid-template-columns:1fr}.stat{grid-template-columns:repeat(2,1fr)}.srow{grid-template-columns:1fr 1fr}.spg{grid-template-columns:1fr}.tabs{margin-left:0}}
-@media print{@page{size:A4;margin:12mm}
- .nt,.top,aside,#vData,#toast,#gate,dialog{display:none!important}
+@media screen and (max-width:900px){.app{flex-wrap:wrap}aside.nav{width:100%;position:static;max-height:none}.cols2{grid-template-columns:1fr}.stat{grid-template-columns:repeat(2,1fr)}.srow{grid-template-columns:1fr 1fr}.tabs{margin-left:0}.frm4{grid-template-columns:1fr 1fr}.brow{grid-template-columns:28px 1fr}.bact{grid-column:2;justify-content:flex-start;max-width:none}.spg .sp{flex-basis:calc((100% - 10px)/2)}.sphead{display:none}.spe{grid-template-columns:66px 1fr 1fr}}
+@media print{
+ .nt,.top,aside,#vData,#vStruct,#toast,#gate,dialog{display:none!important}
  #vDoc{display:block!important}.app{display:block;padding:0;max-width:none}body{background:#fff}
- .idx{display:block;background:#ffffffd1;border-radius:10px;padding:8px 14px;margin-top:14px}.idx h3{margin:0 0 4px;color:var(--b2)}
- .tw{overflow:visible}thead{display:table-header-group}.hd{break-after:avoid}
- [contenteditable]{outline:none!important;background:none!important}.hd [contenteditable]{background:none!important}
- .blk{break-inside:auto}.blk.live,.blk.small{break-inside:avoid}.spfull{break-before:page}
+ .tw{overflow:visible}thead{display:table-header-group}.hd{break-after:avoid}.idx{break-inside:avoid}
+ [contenteditable]{outline:none!important;background:none!important}
+ .blk{break-inside:auto;box-shadow:none!important}.blk.live,.blk.tabb,.blk.small{break-inside:avoid}.spfull{break-before:page}
+ .sec h2{break-after:avoid}.blk>h3,.blk h4{break-after:avoid}
 }
-</style></head><body>
+</style><style id="pgcss"></style></head><body>
 <div id="gate" hidden></div>
 <header class="top nt"><div class="brand"><img id="tlogo" alt="">Comunicati LACT</div>
 <nav class="tabs" id="tabs"></nav><div class="tr" id="topR"></div></header>
 <div id="vData" class="view"></div>
-<div id="vDoc" class="view app"><aside id="side"></aside><main><div id="doc"></div></main></div>
+<div id="vStruct" class="view"></div>
+<div id="vDoc" class="view app"><aside id="side" class="nav nt"></aside><main><div id="doc"></div></main></div>
 <datalist id="stadiList"></datalist>
 <dialog id="dlg"></dialog><dialog id="ask"></dialog><div id="toast"></div>
 <script>
@@ -221,12 +269,12 @@ function toast(t,err){const d=document.createElement('div');d.textContent=t;if(e
 const imgData=(f,max,png)=>new Promise((res,rej)=>{const fr=new FileReader;fr.onerror=rej;fr.onload=()=>{const i=new Image;i.onerror=()=>rej(new Error('immagine non valida'));i.onload=()=>{const k=Math.min(1,max/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=Math.max(1,i.width*k|0);c.height=Math.max(1,i.height*k|0);const x=c.getContext('2d');x.drawImage(i,0,0,c.width,c.height);let a=!!png;if(!a)try{const d=x.getImageData(0,0,c.width,c.height).data;for(let j=3;j<d.length;j+=16)if(d[j]<250){a=true;break}}catch(e){}res(a?c.toDataURL('image/png'):c.toDataURL('image/jpeg',.85))};i.src=fr.result};fr.readAsDataURL(f)});
 
 /* ---------------- stato ---------------- */
-const DEF=()=>({v:2,num:'1',data:todayDots(),stag:'2026-2027',head:{t:'LEGA AMATORI CALCIO TREVISO',s:'Via Benzi 86 – Treviso · www.legaamatoricalciotreviso.it'},logos:{},camps:[],
+const DEF=()=>({v:2,num:'1',data:todayDots(),stag:'2026-2027',head:{t:'LEGA AMATORI CALCIO TREVISO',s:'Via Benzi 86 – Treviso · www.legaamatoricalciotreviso.it'},logos:{},camps:[],opt:{tstyle:'minimal',idx:true,pages:false},
  secs:[{id:uid(),title:'Comunicazioni generali',blocks:[{id:uid(),t:'txt',html:'<p>Scrivi qui le comunicazioni della Lega…</p>'}]}]});
-function mig(o){const d=DEF();if(!o||typeof o!='object'||!Array.isArray(o.secs))return d;o.v=2;o.head=Object.assign({},d.head,o.head||{});o.logos=o.logos||{};o.camps=Array.isArray(o.camps)?o.camps:[];
+function mig(o){const d=DEF();if(!o||typeof o!='object'||!Array.isArray(o.secs))return d;o.v=2;o.head=Object.assign({},d.head,o.head||{});o.logos=o.logos||{};o.camps=Array.isArray(o.camps)?o.camps:[];o.opt=Object.assign({tstyle:'minimal',idx:true,pages:false},o.opt||{});
  ['num','data','stag'].forEach(k=>{if(o[k]==null)o[k]=d[k]});
  o.camps.forEach(c=>{c.id=c.id||uid();c.data=c.data||{};c.upd=c.upd||{};c.rec=c.rec||{}});
- o.secs.forEach(s=>{s.id=s.id||uid();s.blocks=(s.blocks||[]).filter(Boolean);s.blocks.forEach(b=>{b.id=b.id||uid();if(b.t=='live')b.opt=b.opt||{};if(b.items)b.items.forEach(i=>i.id=i.id||uid())})});return o}
+ o.secs.forEach(s=>{s.id=s.id||uid();s.blocks=(s.blocks||[]).filter(Boolean);s.blocks.forEach(b=>{b.id=b.id||uid();if(b.t=='live')b.opt=b.opt||{};if(b.items)b.items.forEach(i=>i.id=i.id||uid());if(b.t=='sponsor'&&!b.lay){b.lay='grid';b.cols='auto';if(b.names==null)b.names=true}if(b.t=='social'&&!b.qrs)b.qrs='auto'})});return o}
 let S;try{S=mig(JSON.parse(localStorage.lact))}catch(x){S=DEF()}
 let E={},MSG={},FB=null,RANGE=null,PRESETS=[],TAB='';try{TAB=localStorage.lact_tab||''}catch(x){}
 const save=()=>{try{localStorage.lact=JSON.stringify(S)}catch(x){toast('Memoria del browser piena: usa “Salva file” e riduci le immagini degli sponsor.',1)}};
@@ -307,11 +355,11 @@ const LV={
   return{title:X?'Prossimo turno – '+gLabel(X.gl):'Recuperi in programma',parts:[{cols:[{h:'Data',c:1},{h:'Campo'},{h:'Casa',team:1},{h:'Ospite',team:1}],rows:[...pend.map(m=>row(m,'REC '+m.g+'ª')),...(X?X.ms.map(m=>row(m)):[])]}]}}},
  classifica:{n:'Classifica',f(b,c){const T=c.data.cla;if(!T||!T.rows.length)return{title:'Classifica',parts:[{empty:'Classifica non caricata.'}]};
   const h=T.h.map(x=>norm(x)=='punti'?'P.ti':x),pi=T.h.findIndex(x=>norm(x)=='punti');
-  return{title:'Classifica',parts:[{cols:[{h:'#',n:1},{h:h[0]||'Squadra',team:1},...h.slice(1).map(x=>({h:x,n:1}))],rows:T.rows.map((r,i)=>({cells:[C(i+1),C(r[0]),...r.slice(1).map((v,j)=>j+1==pi?C(v,`<b>${esc(v)}</b>`):C(v))]}))}]}}},
+  return{title:'Classifica',parts:[{cols:[{h:'#',n:1,cls:'pos'},{h:h[0]||'Squadra',team:1},...h.slice(1).map((x,j)=>({h:x,n:1,cls:j+1==pi?'pts':''}))],rows:T.rows.map((r,i)=>({cells:[C(i+1),C(r[0]),...r.slice(1).map(v=>C(v))]}))}]}}},
  marcatori:{n:'Classifica marcatori',f(b,c){const R=c.data.mar||[];if(!R.length)return{title:'Classifica marcatori',parts:[{empty:'Marcatori non caricati.'}]};
   const top=b.opt.top==null?5:+b.opt.top;let L=R;if(top>0&&R.length>top)L=b.opt.ties?R.filter(r=>r[2]>=R[top-1][2]):R.slice(0,top);
-  let p=0,pv=null;const rows=L.map((r,i)=>{if(r[2]!==pv){p=i+1;pv=r[2]}return{cells:[C(p+'°'),C(r[0]),C(r[1]),C(r[2],`<b>${esc(r[2])}</b>`)]}});
-  return{title:'Classifica marcatori'+(top>0&&R.length>top?` – primi ${top}`:''),parts:[{cols:[{h:'Pos.',n:1},{h:'Atleta'},{h:'Squadra',team:1},{h:'Gol',n:1}],rows}]}}},
+  let p=0,pv=null;const rows=L.map((r,i)=>{if(r[2]!==pv){p=i+1;pv=r[2]}return{cells:[C(p+'°'),C(r[0]),C(r[1]),C(r[2])]}});
+  return{title:'Classifica marcatori'+(top>0&&R.length>top?` – primi ${top}`:''),parts:[{cols:[{h:'Pos.',n:1,cls:'pos'},{h:'Atleta'},{h:'Squadra',team:1},{h:'Gol',n:1,cls:'pts'}],rows}]}}},
  disciplina:{n:'Squalificati e diffidati',f(b,c){const o=b.opt,d=c.data,parts=[];
   if(o.squ!==false){let R=(d.squ||[]).slice();if(o.dal)R=R.filter(r=>!r[3]||r[3]>=o.dal);R.sort((x,y)=>(y[3]||'').localeCompare(x[3]||''));
    parts.push({sub:'Giocatori squalificati',cols:[{h:'Atleta'},{h:'Squadra',team:1},{h:'Sanzione'},{h:'Del',c:1}],rows:R.map(r=>({cells:[C(r[0]),C(r[1]),C(r[2],`<b>${esc(r[2])}</b>`),C(fd(r[3]))]})),empty:d.squ?'Nessun giocatore squalificato.':'Squalificati non caricati (Excel “Squalificati” dal sito).'})}
@@ -325,9 +373,9 @@ const LV={
    rows:L.map(m=>{const r=recOf(c,m),nd=r.auto?m.d:r.nd,st=r.st||m.st;return{rec:1,cells:[C(m.g+'ª'),C(`${m.h} – ${m.a}`,`${tmH(m.h)} – ${tmH(m.a)}`),C(r.auto?'—':fd(m.d)),C(nd?`${wd(nd)} ${fd(nd)}${r.ora?' ore '+r.ora:''}`:'da definire',nd?`<b>${wd(nd)} ${esc(fd(nd))}</b>${r.ora?`<small>ore ${esc(r.ora)}</small>`:''}`:'<i>da definire</i>'),C(campoT(st),campo(st)),C(played(m)?'Giocata: '+m.res:(r.note||''))]}})}]}}}
 };
 function partH(p){const t=p.sub?`<h4>${esc(p.sub)}</h4>`:'';if(!p.rows||!p.rows.length)return t+`<p class="empty">${esc(p.empty||'Nessun dato.')}</p>`;
- return t+`<div class="tw"><table><thead><tr>${p.cols.map(c=>`<th class="${c.n?'n':''}">${esc(c.h)}</th>`).join('')}</tr></thead><tbody>${p.rows.map(r=>`<tr${r.rec?' class="rec"':''}>${r.cells.map((x,j)=>{const k=p.cols[j]||{};return`<td class="${k.n?'n':''}${k.c?' c':''}">${x.h!=null?x.h:k.team?tmH(x.t):esc(x.t)}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>`}
+ return t+`<div class="tw"><table><thead><tr>${p.cols.map(c=>`<th class="${c.n?'n':''}${c.cls?' '+c.cls:''}">${esc(c.h)}</th>`).join('')}</tr></thead><tbody>${p.rows.map(r=>`<tr${r.rec?' class="rec"':''}>${r.cells.map((x,j)=>{const k=p.cols[j]||{};return`<td class="${k.n?'n':''}${k.c?' c':''}${k.cls?' '+k.cls:''}">${x.h!=null?x.h:k.team?tmH(x.t):esc(x.t)}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>`}
 function snap(s,b){const c=camp(b.camp);if(!c)return;const R=LV[b.k].f(b,c),i=s.blocks.indexOf(b);
- const nb=R.parts.filter(p=>p.rows&&p.rows.length).map(p=>({id:uid(),t:'tab',title:p.sub||b.title||R.title,cols:p.cols.map(k=>({h:k.h,n:k.n?1:0,team:k.team?1:0})),rows:p.rows.map(r=>r.cells.map(x=>x.t)),hl:p.rows.map(r=>!!r.rec)}));
+ const nb=R.parts.filter(p=>p.rows&&p.rows.length).map(p=>({id:uid(),t:'tab',title:p.sub||b.title||R.title,cols:p.cols.map(k=>({h:k.h,n:k.n?1:0,team:k.team?1:0,cls:k.cls||''})),rows:p.rows.map(r=>r.cells.map(x=>x.t)),hl:p.rows.map(r=>!!r.rec)}));
  if(!nb.length){toast('Non ci sono righe da convertire.');return}
  s.blocks.splice(i,1,...nb);nb.forEach(x=>E[x.id]=1);toast('Ora è una tabella normale: la modifichi a mano, ma non si aggiorna più con i dati.')}
 
@@ -366,68 +414,106 @@ function socUrl(k,u){u=String(u||'').trim();if(!u)return'';if(/^[a-z]+:/i.test(u
  if(k=='mail'||/^[^\s@/]+@[^\s@/]+\.[a-z]{2,}$/i.test(u))return'mailto:'+u;
  if(/^\+?[\d\s.\-]{6,}$/.test(u)){let n=u.replace(/\D/g,'');if(k=='wa'){if(n.length==10)n='39'+n;return'https://wa.me/'+n}return'tel:'+u.replace(/[^\d+]/g,'')}
  if(k=='ig'&&/^@/.test(u))return'https://instagram.com/'+u.slice(1);if(k=='tt'&&/^@/.test(u))return'https://www.tiktok.com/'+u;return'https://'+u}
-const shortU=u=>String(u).replace(/^(mailto:|tel:)/,'').replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'');
+const shortU=u=>String(u).replace(/^(mailto:|tel:)/,'').replace(/^https?:\/\/(www\.)?/,'').replace(/[?#].*$/,'').replace(/\/$/,'');
 const QRC={};function qrSvg(t){if(QRC[t])return QRC[t];try{const q=qrcode(0,'M');q.addData(t);q.make();return QRC[t]=q.createSvgTag({cellSize:4,margin:2,scalable:true})}catch(x){return''}}
 const NB={
  txt:()=>({t:'txt',html:'<p>Nuovo testo…</p>'}),
  tab:()=>({t:'tab',title:'Nuova tabella',cols:[{h:'Colonna 1'},{h:'Colonna 2'}],rows:[['','']],hl:[]}),
  live:(k,cm)=>({t:'live',k,camp:cm||'',opt:{},title:''}),
- social:()=>({t:'social',title:'Seguici sui nostri canali',intro:'Inquadra il QR code con la fotocamera del telefono per aprire la pagina.',qr:true,items:[{id:uid(),k:'web',label:'legaamatoricalciotreviso.it',url:'https://www.legaamatoricalciotreviso.it'},{id:uid(),k:'ig',label:'',url:''},{id:uid(),k:'fb',label:'',url:''},{id:uid(),k:'wa',label:'',url:''}]}),
+ social:()=>({t:'social',title:'Seguici sui nostri canali',intro:'Inquadra il QR code con la fotocamera del telefono per aprire la pagina.',qr:true,qrs:'auto',items:[{id:uid(),k:'web',label:'legaamatoricalciotreviso.it',url:'https://www.legaamatoricalciotreviso.it'},{id:uid(),k:'ig',label:'',url:''},{id:uid(),k:'fb',label:'',url:''},{id:uid(),k:'wa',label:'',url:''}]}),
  recruit:()=>({t:'recruit',title:'',hl:'Vuoi aiutare a far crescere il movimento? Unisciti a noi!',roles:['Arbitri','Dirigenti e accompagnatori','Fotografi e videomaker','Gestione social'],ct:'Scrivici o parlane con un dirigente della Lega: ogni aiuto conta!'}),
- sponsor:()=>({t:'sponsor',title:'I nostri sponsor',cols:2,full:false,qr:true,items:[{id:uid(),img:'',name:'Nome sponsor',text:'',url:''}]})};
-const SECDEF={txt:'Comunicazioni',social:'Social e contatti',recruit:'Cerchiamo collaboratori',sponsor:'Sponsor e partner',empty:'Nuova sezione'};
+ sponsor:()=>({t:'sponsor',title:'I nostri sponsor',lay:'grid',cols:'auto',names:true,full:false,qr:false,items:[]})};
+const SECDEF={txt:'Comunicazioni',social:'Social e contatti',recruit:'Cerchiamo collaboratori',sponsor:'Sponsor e partner'};
 const campSection=c=>({id:uid(),title:c.name,blocks:['risultati','classifica','marcatori','disciplina','recuperi','prossima'].map(k=>({id:uid(),...NB.live(k,c.id)}))});
-const ADDOPTS=`<option value="">+ Aggiungi un blocco in questa sezione…</option><optgroup label="Base"><option value="txt">Testo</option><option value="tab">Tabella libera</option></optgroup><optgroup label="Automatici (dai dati del campionato)"><option value="live:risultati">Risultati ultima giornata</option><option value="live:prossima">Prossima giornata (anteprima)</option><option value="live:classifica">Classifica</option><option value="live:marcatori">Classifica marcatori</option><option value="live:disciplina">Squalificati e diffidati</option><option value="live:recuperi">Recuperi</option></optgroup><optgroup label="Sezioni pronte"><option value="social">Social e QR code</option><option value="recruit">Cerchiamo collaboratori</option><option value="sponsor">Sponsor / pubblicità</option></optgroup>`;
+const BL={txt:['📝','Testo'],tab:['▦','Tabella'],social:['📱','Social e QR code'],recruit:['🤝','Cerchiamo collaboratori'],sponsor:['⭐','Sponsor / pubblicità'],
+ 'live:risultati':['⚽','Risultati ultima giornata'],'live:prossima':['📅','Prossimo turno'],'live:classifica':['🏆','Classifica'],'live:marcatori':['🥅','Classifica marcatori'],'live:disciplina':['🟨','Squalificati e diffidati'],'live:recuperi':['🔁','Recuperi']};
+const bkey=b=>b.t=='live'?'live:'+b.k:b.t;
+const ADDOPTS=`<option value="">+ Aggiungi un blocco…</option><optgroup label="Automatici (dai dati del campionato)">${['risultati','prossima','classifica','marcatori','disciplina','recuperi'].map(k=>`<option value="live:${k}">${BL['live:'+k][0]} ${BL['live:'+k][1]}</option>`).join('')}</optgroup><optgroup label="Da compilare">${['txt','tab','social','recruit','sponsor'].map(k=>`<option value="${k}">${BL[k][0]} ${BL[k][1]}</option>`).join('')}</optgroup>`;
+const plain=h=>{try{return new DOMParser().parseFromString(String(h||''),'text/html').body.textContent.replace(/\s+/g,' ').trim()}catch(x){return''}};
+const spCols=b=>{const n=b.items.length;if(b.cols&&b.cols!='auto')return+b.cols;return n<=1?1:n<=4?n:n<=6?3:n<=8?4:n<=15?5:6};
+const qrSize=b=>{if(b.qrs&&b.qrs!='auto')return b.qrs;const n=b.items.filter(i=>i.url).length;return n<=2?'l':n<=4?'m':'s'};
 
-/* ---------------- rendering del comunicato ---------------- */
+/* ---------------- ③ contenuti e anteprima ---------------- */
 const ce=o=>o?' contenteditable="true"':'';
-const pen=(i,o)=>`<button class="pen nt" data-a="pen" data-i="${i}" title="${o?'Fine modifica':'Modifica'}">${o?'✓':'✎'}</button>`;
-const tools=(s,b,e)=>`<div class="tools nt">${e?`<button data-a="up" data-b="${b.id}" title="Sposta su">↑</button><button data-a="dn" data-b="${b.id}" title="Sposta giù">↓</button><button data-a="del" data-b="${b.id}" title="Elimina blocco">🗑</button>`:''}${pen(b.id,e)}</div>`;
-const ttl=(b,e,def)=>(b.title||e)?`<h3 data-b="${b.id}" data-bf="title"${ce(e)}>${esc(b.title||def||'')}</h3>`:'<span></span>';
+const editable=b=>b.t!='live';
+const tools=b=>`<div class="tools nt">${b.t=='live'?`<button class="pen" data-a="goset" data-b="${b.id}" title="Impostazioni del blocco (scheda ② Struttura)">⚙</button>`:`<button class="pen${E[b.id]?' on':''}" data-a="pen" data-i="${b.id}" title="${E[b.id]?'Fine modifica':'Modifica il contenuto'}">${E[b.id]?'✓':'✎'}</button>`}</div>`;
+const h3=t=>t?`<h3>${esc(t)}</h3>`:'';
 const HDBG='<svg class="bg" preserveAspectRatio="none" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="hdg" x1="0" y1="0" x2="1" y2="0.25"><stop offset="0" stop-color="#0f3466"/><stop offset="1" stop-color="#1d4f91"/></linearGradient></defs><rect width="100" height="100" fill="url(#hdg)"/></svg>';
-function txtBlk(s,b){const e=E[b.id];return`<div class="blk${e?' ed':''}">${tools(s,b,e)}${e?rtbar():''}<div class="txt" data-b="${b.id}" data-bf="html"${ce(e)}>${b.html}</div></div>`}
-function tabBlk(s,b){const e=E[b.id],hl=b.hl||[];
- return`<div class="blk${e?' ed':''}"><div class="bt"><h3 data-b="${b.id}" data-bf="title"${ce(e)}>${esc(b.title)}</h3>${tools(s,b,e)}</div><div class="tw"><table><thead><tr>${b.cols.map((c,j)=>`<th class="${c.n?'n':''}"><span data-b="${b.id}" data-h="${j}"${ce(e)}>${esc(c.h)}</span></th>`).join('')}${e?'<th class="nt"></th>':''}</tr></thead><tbody>${b.rows.map((r,i)=>`<tr${hl[i]?' class="rec"':''}>${r.map((v,j)=>`<td class="${b.cols[j]&&b.cols[j].n?'n':''}">${b.cols[j]&&b.cols[j].team&&lg(v)?`<img class="lg" src="${lg(v)}" alt="">`:''}<span data-b="${b.id}" data-r="${i}" data-col="${j}"${ce(e)}>${esc(v)}</span></td>`).join('')}${e?`<td class="nt" style="white-space:nowrap"><button data-a="hlrow" data-b="${b.id}" data-r="${i}" title="Evidenzia in giallo">🟨</button><button data-a="delrow" data-b="${b.id}" data-r="${i}" title="Elimina riga">×</button></td>`:''}</tr>`).join('')}</tbody></table></div>${e?`<div class="nt" style="margin-top:4px"><button data-a="addrow" data-b="${b.id}">+ riga</button><button data-a="addcol" data-b="${b.id}">+ colonna</button><button data-a="delcol" data-b="${b.id}">− colonna</button></div>`:''}</div>`}
-function liveOpts(b,c){const o=b.opt,id=b.id,sel=(k,L,v)=>`<select data-o="${k}" data-b="${id}">${L.map(([x,l])=>`<option value="${esc(x)}"${String(v)==String(x)?' selected':''}>${esc(l)}</option>`).join('')}</select>`,ck=(k,l,d)=>`<label class="ck"><input type="checkbox" data-o="${k}" data-b="${id}"${(o[k]??d)?' checked':''}> ${l}</label>`;
- let h=`<span class="tag">AUTOMATICO</span><label class="f">Campionato ${sel('camp',[['','— scegli —'],...S.camps.map(x=>[x.id,x.name])],b.camp||'')}</label>`;const gs=c?giornate(c).map(x=>[x.g,gLabel(x.gl)]):[];
+function txtBlk(b){const e=E[b.id];return`<div class="blk txtb${e?' ed':''}" id="b-${b.id}">${tools(b)}${e?rtbar():''}<div class="txt" data-b="${b.id}" data-bf="html"${ce(e)}>${b.html}</div></div>`}
+function tabBlk(b){const e=E[b.id],hl=b.hl||[];
+ return`<div class="blk tabb${e?' ed':''}" id="b-${b.id}">${tools(b)}${h3(b.title)}<div class="tw"><table><thead><tr>${b.cols.map((c,j)=>`<th class="${c.n?'n':''}${c.cls?' '+c.cls:''}"><span data-b="${b.id}" data-h="${j}"${ce(e)}>${esc(c.h)}</span></th>`).join('')}${e?'<th class="nt"></th>':''}</tr></thead><tbody>${b.rows.map((r,i)=>`<tr${hl[i]?' class="rec"':''}>${r.map((v,j)=>{const c=b.cols[j]||{};return`<td class="${c.n?'n':''}${c.cls?' '+c.cls:''}">${c.team&&lg(v)?`<img class="lg" src="${lg(v)}" alt="">`:''}<span data-b="${b.id}" data-r="${i}" data-col="${j}"${ce(e)}>${esc(v)}</span></td>`}).join('')}${e?`<td class="nt rowb"><button data-a="hlrow" data-b="${b.id}" data-r="${i}" title="Evidenzia la riga in giallo">🟨</button><button data-a="delrow" data-b="${b.id}" data-r="${i}" title="Elimina la riga">×</button></td>`:''}</tr>`).join('')}</tbody></table></div>${e?`<div class="nt edrow"><button data-a="addrow" data-b="${b.id}">+ riga</button><button data-a="addcol" data-b="${b.id}">+ colonna</button><button data-a="delcol" data-b="${b.id}">− colonna</button></div>`:''}</div>`}
+function liveBlk(b){const c=camp(b.camp),L=LV[b.k];if(!L)return'';
+ const R=c?L.f(b,c):{title:L.n,parts:[{empty:S.camps.length?'Scegli il campionato nella scheda ② Struttura.':'Nessun campionato: crealo nella scheda ① Dati campionati.'}]};
+ return`<div class="blk live" id="b-${b.id}">${tools(b)}${h3(b.title||R.title)}${R.parts.map(partH).join('')}</div>`}
+function socialBlk(b){const e=E[b.id],its=b.items.filter(i=>i.url);
+ return`<div class="blk small${e?' ed':''}" id="b-${b.id}">${tools(b)}${h3(b.title)}
+ ${e?`<div class="edit nt"><div class="hint">Scrivi l’indirizzo della pagina (o il numero WhatsApp, o l’email): il QR code si crea da solo. Le righe senza indirizzo non vengono stampate.</div>${b.items.map(i=>`<div class="srow"><select data-bi="k" data-b="${b.id}" data-item="${i.id}">${Object.entries(SOC).map(([k,[n]])=>`<option value="${k}"${i.k==k?' selected':''}>${n}</option>`).join('')}</select><input data-bi="label" data-b="${b.id}" data-item="${i.id}" value="${esc(i.label)}" placeholder="Nome visibile (es. @lega_treviso)"><input data-bi="url" data-b="${b.id}" data-item="${i.id}" value="${esc(i.url)}" placeholder="Indirizzo, numero o email"><button data-a="itdel" data-b="${b.id}" data-item="${i.id}" title="Rimuovi">×</button></div>`).join('')}<button data-a="itadd" data-b="${b.id}">+ Aggiungi link</button></div>`:''}
+ ${b.intro||e?`<p class="intro" data-b="${b.id}" data-bf="intro"${ce(e)}>${esc(b.intro)}</p>`:''}
+ ${its.length?`<div class="soc q-${qrSize(b)}${b.qr===false?' noqr':''}">${its.map(i=>{const[n,col]=SOC[i.k]||SOC.alt,u=socUrl(i.k,i.url);return`<a class="sc" href="${esc(u)}" target="_blank" rel="noopener" style="--c:${col}"><div class="pl">${n}</div>${b.qr!==false?`<div class="qr">${qrSvg(u)}</div>`:''}<div class="hn">${esc(i.label||shortU(u))}</div>${i.label?`<div class="u">${esc(shortU(u))}</div>`:''}</a>`}).join('')}</div>`:'<p class="empty">Nessun link inserito: clicca ✎ per aggiungerli.</p>'}</div>`}
+function recruitBlk(b){const e=E[b.id];
+ return`<div class="blk small${e?' ed':''}" id="b-${b.id}">${tools(b)}${h3(b.title)}
+ ${e?`<div class="edit nt"><label class="f" style="width:100%;margin:0">Posizioni che cerchiamo (una per riga; lascia vuoto per non mostrarle)<textarea rows="4" data-bp="roles" data-b="${b.id}">${esc((b.roles||[]).join('\n'))}</textarea></label><div class="hint">Frase in corsivo e contatti si scrivono direttamente nel riquadro qui sotto.</div></div>`:''}
+ <div class="recruit"><span class="hl" data-b="${b.id}" data-bf="hl"${ce(e)}>${esc(b.hl)}</span>${(b.roles||[]).length?`<div class="ql">Cerchiamo</div><div class="roles">${b.roles.map(r=>`<span>${esc(r)}</span>`).join('')}</div>`:''}${b.ct||e?`<div class="ct" data-b="${b.id}" data-bf="ct"${ce(e)}>${esc(b.ct)}</div>`:''}</div></div>`}
+function sponsorBlk(b){const e=E[b.id],grid=b.lay!='cards',I=(i,f,ph)=>`<input data-bi="${f}" data-b="${b.id}" data-item="${i.id}" value="${esc(i[f])}" placeholder="${ph}">`;
+ return`<div class="blk spb${b.full?' spfull':''}${e?' ed':''}" id="b-${b.id}">${tools(b)}${h3(b.title)}
+ ${e?`<div class="edit nt"><div class="sptop"><label class="btn pri">⬆ Carica più loghi insieme<input type="file" multiple accept="image/*" hidden data-spbulk="${b.id}"></label><span class="hint">Un nuovo sponsor per ogni immagine; il nome viene dal nome del file. Layout e colonne si scelgono nella scheda ② Struttura.</span></div>
+  ${b.items.length?`<div class="sphead"><span>Logo</span><span>Nome</span><span>Link (facoltativo)</span><span>Testo (facoltativo)</span><span></span></div>`:''}${b.items.map(i=>`<div class="spe"><label class="th" title="Carica o cambia il logo">${i.img?`<img src="${i.img}" alt="">`:'+ logo'}<input type="file" accept="image/*" hidden data-spimg="${i.id}" data-b="${b.id}"></label>${I(i,'name','Nome sponsor')}${I(i,'url','Sito, Instagram, telefono…')}${I(i,'text','Offerta o descrizione')}<span class="spb2"><button data-a="itup" data-b="${b.id}" data-item="${i.id}" title="Sposta prima">↑</button><button data-a="itdn" data-b="${b.id}" data-item="${i.id}" title="Sposta dopo">↓</button><button class="dang" data-a="itdel" data-b="${b.id}" data-item="${i.id}" title="Rimuovi sponsor">×</button></span></div>`).join('')}<button data-a="itadd" data-b="${b.id}">+ Aggiungi uno sponsor</button></div>`:''}
+ ${b.items.length?`<div class="spg ${grid?'grid':'cards'}" style="--cols:${spCols(b)}">${b.items.map(i=>{const u=i.url?socUrl('alt',i.url):'';return`<div class="sp"><div class="logo">${i.img?`<img src="${i.img}" alt="${esc(i.name)}">`:`<span>${esc(i.name||'Logo')}</span>`}</div>${b.names!==false&&i.name&&(i.img||!grid)?`<div class="nm">${esc(i.name)}</div>`:''}${!grid&&i.text?`<div class="tx">${esc(i.text)}</div>`:''}${grid&&i.text?`<div class="tx sm">${esc(i.text)}</div>`:''}${u&&b.qr?`<div class="qrs">${qrSvg(u)}</div>`:''}${u&&!grid?`<a class="u" href="${esc(u)}" target="_blank" rel="noopener">${esc(shortU(u))}</a>`:''}</div>`}).join('')}</div>`:'<p class="empty">Nessuno sponsor: clicca ✎ e usa “Carica più loghi insieme”.</p>'}</div>`}
+function blk(b){switch(b.t){case'txt':return txtBlk(b);case'tab':return tabBlk(b);case'live':return liveBlk(b);case'social':return socialBlk(b);case'recruit':return recruitBlk(b);case'sponsor':return sponsorBlk(b)}return''}
+function pageCSS(){const q=s=>'"'+String(s).replace(/["\\]/g,'\\$&')+'"',st='font:8.5px "Segoe UI",system-ui,sans-serif;color:#6b7c93;',on=S.opt.pages;
+ return`@media print{@page{size:A4;margin:12mm 12mm 13mm;@top-left{content:""}@top-center{content:""}@top-right{content:""}@bottom-center{content:""}@bottom-left{${on?`content:${q('Comunicato Ufficiale n. '+S.num+' del '+S.data)};`:'content:"";'}${st}}@bottom-right{${on?'content:"Pagina " counter(page) " di " counter(pages);':'content:"";'}${st}}}}`}
+function renderDoc(){const L=S.lega||LEGA;document.documentElement.style.setProperty('--wm','url("'+L+'")');$('#pgcss').textContent=pageCSS();
+ $('#doc').innerHTML=`<header class="hd" id="s-top">${HDBG}<img src="${L}" alt=""><div><h1>${esc(S.head.t)}</h1><p class="s">${esc(S.head.s)}</p><p>Comunicato Ufficiale n. ${esc(S.num)} emesso in data ${esc(S.data)} – Stagione Sportiva ${esc(S.stag)}</p></div></header>
+ ${S.opt.idx!==false&&S.secs.length?`<nav class="idx"><h3>Indice</h3>${S.secs.map((s,i)=>`<a href="#s-${s.id}"><span>${i+1}.</span> ${esc(s.title)}</a>`).join('')}</nav>`:''}`+
+ S.secs.map((s,i)=>`<section class="sec" id="s-${s.id}"><h2>${i+1}. ${esc(s.title)}</h2>${s.blocks.map(blk).join('')||'<p class="empty nt">Sezione vuota: aggiungi i blocchi nella scheda ② Struttura.</p>'}</section>`).join('');
+ $('#side').innerHTML=`<div class="navh">Vai a</div><button class="lnk" data-a="goto" data-s="top">Intestazione</button>${S.secs.map((s,i)=>`<button class="lnk" data-a="goto" data-s="${s.id}">${i+1}. ${esc(s.title)}</button>`).join('')}
+ <p class="hint">Qui modifichi i <b>contenuti</b>: clicca ✎ su un blocco (testi, tabelle, social, sponsor…).<br>Sezioni, ordine e impostazioni stanno in <button class="lnk in" data-a="tab" data-v="struct">② Struttura</button>.</p>`}
+
+/* ---------------- ② struttura ---------------- */
+function liveSet(b){const o=b.opt,id=b.id,c=camp(b.camp),sel=(k,L,v)=>`<select data-o="${k}" data-b="${id}">${L.map(([x,l])=>`<option value="${esc(x)}"${String(v)==String(x)?' selected':''}>${esc(l)}</option>`).join('')}</select>`,ck=(k,l,d)=>`<label class="ck"><input type="checkbox" data-o="${k}" data-b="${id}"${(o[k]??d)?' checked':''}> ${l}</label>`;
+ let h=`<label class="f">Campionato ${sel('camp',[['','— scegli —'],...S.camps.map(x=>[x.id,x.name])],b.camp||'')}</label>`;const gs=c?giornate(c).map(x=>[x.g,gLabel(x.gl)]):[];
  if(b.k=='risultati')h+=`<label class="f">Giornata ${sel('g',[['auto','Automatica (ultima giocata)'],...gs],o.g||'auto')}</label>`+ck('rec','Aggiungi recuperi giocati',true);
  if(b.k=='prossima')h+=`<label class="f">Giornata ${sel('g',[['auto','Automatica (la prossima)'],...gs],o.g||'auto')}</label>`+ck('pos','Posizione in classifica',true)+ck('rec','Recuperi in programma',true);
- if(b.k=='marcatori')h+=`<label class="f">Quanti mostrarne ${sel('top',[[3,'Primi 3'],[5,'Primi 5'],[10,'Primi 10'],[0,'Tutti']],o.top??5)}</label>`+ck('ties','Includi i pari merito',false);
- if(b.k=='disciplina')h+=ck('squ','Squalificati',true)+ck('dif','Diffidati',true)+ck('amm','Ammoniti dell’ultima giornata',false)+`<label class="f">Squalifiche dal <input type="date" data-o="dal" data-b="${id}" value="${esc(o.dal||'')}"></label>`;
- if(b.k=='recuperi')h+=ck('giocati','Mostra anche i recuperi già giocati',false);
- h+=`<span style="flex:1"></span>${b.title?`<button data-a="tauto" data-b="${id}">↺ Titolo automatico</button>`:''}<button data-a="snap" data-b="${id}" title="Trasforma in tabella normale modificabile a mano (non si aggiorna più con i dati)">✂ Rendi modificabile</button>`;
- if(b.k=='recuperi'&&c)h+=recForm(c);return h}
-function liveBlk(s,b){const e=E[b.id],c=camp(b.camp),L=LV[b.k];if(!L)return'';
- const R=c?L.f(b,c):{title:L.n,parts:[{empty:S.camps.length?'Scegli il campionato (clicca ✎).':'Nessun campionato: crealo nella scheda “Dati campionati”.'}]};
- return`<div class="blk live${e?' ed':''}">${e?`<div class="opts nt">${liveOpts(b,c)}</div>`:''}<div class="bt"><h3 data-b="${b.id}" data-bf="title"${ce(e)}>${esc(b.title||R.title)}</h3>${tools(s,b,e)}</div>${R.parts.map(partH).join('')}</div>`}
-function socialBlk(s,b){const e=E[b.id],its=b.items.filter(i=>i.url);
- return`<div class="blk small${e?' ed':''}"><div class="bt">${ttl(b,e)}${tools(s,b,e)}</div>
- ${e?`<div class="opts nt" style="display:block"><div class="hint" style="margin:0 0 6px">Scrivi l’indirizzo della pagina (o il numero WhatsApp, o l’email): il QR code si crea da solo. Le righe senza indirizzo non vengono stampate.</div>${b.items.map(i=>`<div class="srow"><select data-bi="k" data-b="${b.id}" data-item="${i.id}">${Object.entries(SOC).map(([k,[n]])=>`<option value="${k}"${i.k==k?' selected':''}>${n}</option>`).join('')}</select><input data-bi="label" data-b="${b.id}" data-item="${i.id}" value="${esc(i.label)}" placeholder="Nome visibile (es. @lega_treviso)"><input data-bi="url" data-b="${b.id}" data-item="${i.id}" value="${esc(i.url)}" placeholder="Indirizzo, numero o email"><button data-a="itdel" data-b="${b.id}" data-item="${i.id}" title="Rimuovi">×</button></div>`).join('')}<button data-a="itadd" data-b="${b.id}">+ Aggiungi link</button> <label class="ck"><input type="checkbox" data-bp="qr" data-b="${b.id}"${b.qr!==false?' checked':''}> Mostra i QR code</label></div>`:''}
- ${b.intro||e?`<p class="intro" data-b="${b.id}" data-bf="intro"${ce(e)} style="margin:4px 0">${esc(b.intro)}</p>`:''}
- ${its.length?`<div class="soc">${its.map(i=>{const[n,col]=SOC[i.k]||SOC.alt,u=socUrl(i.k,i.url);return`<a class="sc" href="${esc(u)}" target="_blank" rel="noopener" style="--c:${col}"><div class="pl">${n}</div>${b.qr!==false?`<div class="qr">${qrSvg(u)}</div>`:''}<div class="hn">${esc(i.label||shortU(u))}</div>${i.label?`<div class="u">${esc(shortU(u))}</div>`:''}</a>`}).join('')}</div>`:'<p class="empty">Nessun link inserito: clicca ✎ per aggiungerli.</p>'}</div>`}
-function recruitBlk(s,b){const e=E[b.id];
- return`<div class="blk small${e?' ed':''}"><div class="bt">${ttl(b,e,'')}${tools(s,b,e)}</div>
- ${e?`<div class="opts nt" style="display:block"><label class="f" style="width:100%;margin:0">Posizioni che cerchiamo (una per riga; lascia vuoto per non mostrarle)<textarea rows="4" data-bp="roles" data-b="${b.id}">${esc((b.roles||[]).join('\n'))}</textarea></label></div>`:''}
- <div class="recruit"><span class="hl" data-b="${b.id}" data-bf="hl"${ce(e)}>${esc(b.hl)}</span>${(b.roles||[]).length?`<div class="ql">Cerchiamo</div><div class="roles">${b.roles.map(r=>`<span>${esc(r)}</span>`).join('')}</div>`:''}${b.ct||e?`<div class="ct" data-b="${b.id}" data-bf="ct"${ce(e)}>${esc(b.ct)}</div>`:''}</div></div>`}
-function sponsorBlk(s,b){const e=E[b.id],I=(i,f,ph,tag='input')=>tag=='input'?`<input data-bi="${f}" data-b="${b.id}" data-item="${i.id}" value="${esc(i[f])}" placeholder="${ph}">`:`<textarea rows="2" data-bi="${f}" data-b="${b.id}" data-item="${i.id}" placeholder="${ph}">${esc(i[f])}</textarea>`;
- return`<div class="blk${b.full?' spfull':''}${e?' ed':''}"><div class="bt">${ttl(b,e)}${tools(s,b,e)}</div>
- ${e?`<div class="opts nt" style="display:block"><label class="f" style="flex-direction:row;align-items:center;gap:6px">Colonne <select data-bp="cols" data-b="${b.id}">${[1,2,3].map(n=>`<option${+b.cols==n?' selected':''}>${n}</option>`).join('')}</select></label><label class="ck"><input type="checkbox" data-bp="full" data-b="${b.id}"${b.full?' checked':''}> Pagina intera nel PDF (pagina promozionale)</label><label class="ck"><input type="checkbox" data-bp="qr" data-b="${b.id}"${b.qr!==false?' checked':''}> QR code del link</label>
- ${b.items.map(i=>`<div class="spe"><label class="th" title="Carica logo o volantino">${i.img?`<img src="${i.img}" alt="">`:'Clicca per caricare logo o volantino'}<input type="file" accept="image/*" hidden data-spimg="${i.id}" data-b="${b.id}"></label><div class="fl">${I(i,'name','Nome sponsor')}${I(i,'text','Testo promozionale (facoltativo)','ta')}${I(i,'url','Sito, Instagram, telefono o email (facoltativo)')}<div><button data-a="itup" data-b="${b.id}" data-item="${i.id}" title="Sposta prima">↑</button><button data-a="itdn" data-b="${b.id}" data-item="${i.id}" title="Sposta dopo">↓</button>${i.img?`<button data-a="itimgdel" data-b="${b.id}" data-item="${i.id}">Togli immagine</button>`:''}<button class="dang" data-a="itdel" data-b="${b.id}" data-item="${i.id}">Rimuovi sponsor</button></div></div></div>`).join('')}<button data-a="itadd" data-b="${b.id}">+ Aggiungi sponsor</button></div>`:''}
- <div class="spg" style="--cols:${b.cols||2}">${b.items.map(i=>{const u=i.url?socUrl('alt',i.url):'';return`<div class="sp">${i.img?`<img class="im" src="${i.img}" alt="">`:e?'<div class="ph">Logo / immagine</div>':''}${i.name?`<div class="nm">${esc(i.name)}</div>`:''}${i.text?`<div class="tx">${esc(i.text)}</div>`:''}${u&&b.qr!==false?`<div class="qrs">${qrSvg(u)}</div>`:''}${u?`<a class="u" href="${esc(u)}" target="_blank" rel="noopener">${esc(shortU(u))}</a>`:''}</div>`}).join('')}</div></div>`}
-function blk(s,b){switch(b.t){case'txt':return txtBlk(s,b);case'tab':return tabBlk(s,b);case'live':return liveBlk(s,b);case'social':return socialBlk(s,b);case'recruit':return recruitBlk(s,b);case'sponsor':return sponsorBlk(s,b)}return''}
-function renderDoc(){const L=S.lega||LEGA;document.documentElement.style.setProperty('--wm','url("'+L+'")');
- const F=k=>`<span data-f="${k}"${ce(E.hd)}>${esc(S[k])}</span>`,H=k=>`<span data-hf="${k}"${ce(E.hd)}>${esc(S.head[k])}</span>`;
- $('#doc').innerHTML=`<header class="hd">${HDBG}<img src="${L}" alt=""><div><h1>${H('t')}</h1><p class="s">${H('s')}</p><p>Comunicato Ufficiale n. ${F('num')} emesso in data ${F('data')} – Stagione Sportiva ${F('stag')}</p></div>${pen('hd',E.hd)}</header>
- <nav class="idx"><h3>Indice</h3>${S.secs.map((s,i)=>`<a href="#s-${s.id}">${i+1}. ${esc(s.title)}</a>`).join('')}</nav>`+
- S.secs.map((s,i)=>`<section class="sec" id="s-${s.id}"><h2>${i+1}. <span data-s="${s.id}" data-sf="title"${ce(E[s.id])}>${esc(s.title)}</span>${pen(s.id,E[s.id])}</h2>${s.blocks.map(b=>blk(s,b)).join('')}<div class="add nt"><select data-addb="${s.id}">${ADDOPTS}</select></div></section>`).join('')}
-function renderSide(){$('#side').innerHTML=`<button class="big" data-a="pdf">⬇ Esporta PDF</button><small>${window.lact&&window.lact.pdf?'Scegli dove salvare il PDF.':'Nella finestra di stampa scegli “Salva come PDF”; in “Altre impostazioni” lascia attiva “Grafica di sfondo”.'}</small>
- <h3>Intestazione</h3><div class="hf"><span>N°</span><input data-fi="num" value="${esc(S.num)}"><span>Data</span><input data-fi="data" value="${esc(S.data)}"><span>Stagione</span><input data-fi="stag" value="${esc(S.stag)}"></div><small>Titolo e indirizzo si modificano con ✎ sull’intestazione.</small>
- <h3>Sezioni (clicca per andarci)</h3><ol>${S.secs.map(s=>`<li><span><button data-a="secup" data-s="${s.id}" title="Sposta su">↑</button><button data-a="secdn" data-s="${s.id}" title="Sposta giù">↓</button><button data-a="secdel" data-s="${s.id}" title="Elimina sezione">×</button></span><a href="#s-${s.id}">${esc(s.title)}</a></li>`).join('')}</ol>
- <h3>Aggiungi sezione pronta</h3><div class="qs">${S.camps.length?`<div class="w"><select id="qsCamp">${S.camps.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select><button data-a="qs" data-k="camp" title="Risultati, classifica, marcatori, disciplina, recuperi e prossima giornata">🏟 Aggiungi</button></div>`:''}<button data-a="qs" data-k="txt">📢 Comunicazioni</button><button data-a="qs" data-k="social">📱 Social e QR</button><button data-a="qs" data-k="recruit">🤝 Collaboratori</button><button data-a="qs" data-k="sponsor">⭐ Sponsor</button><button data-a="qs" data-k="empty">▫ Sezione vuota</button></div>
- <h3>Loghi</h3><button data-a="logos">Loghi delle squadre…</button><label class="btn">Logo della Lega<input id="lg0" type="file" accept="image/*" hidden></label>
- <h3>Comunicato</h3><button data-a="new">Nuovo comunicato…</button><button data-a="save" title="Scarica una copia di sicurezza (.json)">Salva file</button><label class="btn">Apri file<input id="op" type="file" accept=".json" hidden></label>${cloudOn()?'<button data-a="presets">📁 Preset…</button>':'<small>In modalità locale il lavoro resta in questo browser: ogni tanto usa “Salva file”.</small>'}`}
+ if(b.k=='marcatori')h+=`<label class="f">Quanti ${sel('top',[[3,'Primi 3'],[5,'Primi 5'],[10,'Primi 10'],[0,'Tutti']],o.top??5)}</label>`+ck('ties','Pari merito',false);
+ if(b.k=='disciplina')h+=ck('squ','Squalificati',true)+ck('dif','Diffidati',true)+ck('amm','Ammoniti ultima giornata',false)+`<label class="f">Squalifiche dal <input type="date" data-o="dal" data-b="${id}" value="${esc(o.dal||'')}"></label>`;
+ if(b.k=='recuperi')h+=ck('giocati','Anche quelli già giocati',false);
+ const auto=c?LV[b.k].f(b,c).title:LV[b.k].n;
+ return h+`<label class="f grow2">Titolo <input data-bp="title" data-b="${id}" value="${esc(b.title||'')}" placeholder="${esc(auto)} (automatico)"></label><button data-a="snap" data-b="${id}" title="Trasforma in tabella normale da correggere a mano: da quel momento non si aggiorna più con i dati">✂ Rendi modificabile</button>`}
+function bSettings(b){const id=b.id,T=(ph)=>`<label class="f grow2">Titolo <input data-bp="title" data-b="${id}" value="${esc(b.title||'')}" placeholder="${ph}"></label>`,
+ S2=(k,L,v)=>`<select data-bp="${k}" data-b="${id}">${L.map(([x,l])=>`<option value="${x}"${String(v)==String(x)?' selected':''}>${l}</option>`).join('')}</select>`,
+ K=(k,l,d)=>`<label class="ck"><input type="checkbox" data-bp="${k}" data-b="${id}"${(b[k]??d)?' checked':''}> ${l}</label>`;
+ switch(b.t){case'live':return liveSet(b);
+  case'tab':return T('Titolo della tabella');
+  case'recruit':return T('Titolo (facoltativo)');
+  case'social':return T('Titolo (facoltativo)')+K('qr','Mostra i QR code',true)+`<label class="f">Dimensione QR ${S2('qrs',[['auto','Automatica'],['s','Piccoli'],['m','Medi'],['l','Grandi']],b.qrs||'auto')}</label>`;
+  case'sponsor':return T('Titolo (facoltativo)')+`<label class="f">Layout ${S2('lay',[['grid','Griglia di loghi'],['cards','Schede con testo']],b.lay||'grid')}</label><label class="f">Per riga ${S2('cols',[['auto','Automatico'],[2,2],[3,3],[4,4],[5,5],[6,6]],b.cols||'auto')}</label>`+K('names','Nomi sotto i loghi',true)+K('qr','QR del link',false)+K('full','Pagina intera nel PDF',false);
+  default:return'<span class="hint">Il testo si scrive nella scheda ③ Contenuti.</span>'}}
+let OPEN=new Set;
+function bSummary(b){const c=b.t=='live'&&camp(b.camp),o=b.opt||{},T=b.title?` · titolo “${b.title}”`:'';
+ switch(b.t){case'txt':{const t=plain(b.html);return t.length>80?t.slice(0,80)+'…':t||'(vuoto)'}
+  case'tab':return(b.title||'')+' · '+b.rows.length+' righe';case'social':return b.items.filter(i=>i.url).length+' link · QR '+(b.qr===false?'nascosti':{auto:'dimensione automatica',s:'piccoli',m:'medi',l:'grandi'}[b.qrs||'auto'])+T;
+  case'sponsor':return b.items.length+' sponsor · '+(b.lay=='cards'?'schede':'griglia di loghi')+' · '+(b.cols&&b.cols!='auto'?b.cols+' per riga':'colonne automatiche')+(b.full?' · pagina intera':'')+T;case'recruit':return b.hl;
+  case'live':{if(!c)return'⚠ nessun campionato scelto';let x=c.name;if(b.k=='risultati'||b.k=='prossima'){const g=o.g&&o.g!='auto'?+o.g:b.k=='risultati'?lastG(c):nextG(c),G=giornate(c).find(y=>y.g==g);x+=' · '+(G?gLabel(G.gl):'nessuna giornata')+(o.g&&o.g!='auto'?' (scelta a mano)':' (automatica)')}
+   if(b.k=='marcatori'){const t=o.top==null?5:+o.top;x+=' · '+(t?'primi '+t:'tutti')+(o.ties?' + pari merito':'')}if(b.k=='disciplina')x+=' · '+[o.squ!==false&&'squalificati',o.dif!==false&&'diffidati',o.amm&&'ammoniti'].filter(Boolean).join(', ');return x+T}}return''}
+function bRow(s,b){const[ic,nm]=BL[bkey(b)]||['▫',b.t],op=OPEN.has(b.id),hs=b.t!='txt';
+ return`<div class="brow" id="r-${b.id}"><div class="bic">${ic}</div><div class="bmain"><div class="bname">${nm}${b.t=='live'?' <span class="badge">automatico</span>':''}<small>${esc(bSummary(b))}</small></div>${op&&hs?`<div class="bset">${bSettings(b)}</div>`:''}</div>
+ <div class="bact">${hs?`<button class="gear${op?' on':''}" data-a="bset" data-b="${b.id}" title="${op?'Chiudi le impostazioni':'Impostazioni del blocco'}">⚙ ${op?'Chiudi':'Imposta'}</button>`:''}${S.secs.length>1?`<select data-mvb="${b.id}" title="Sposta il blocco in un’altra sezione"><option value="">Sposta in…</option>${S.secs.filter(x=>x!==s).map(x=>`<option value="${x.id}">${esc(x.title)}</option>`).join('')}</select>`:''}<button data-a="up" data-b="${b.id}" title="Sposta su">↑</button><button data-a="dn" data-b="${b.id}" title="Sposta giù">↓</button><button class="dang" data-a="del" data-b="${b.id}" title="Elimina il blocco">🗑</button></div></div>`}
+function secPanel(s,i){return`<div class="spsec" id="ss-${s.id}"><div class="sh"><span class="sn">${i+1}</span><input class="st" data-st="title" data-s="${s.id}" value="${esc(s.title)}" placeholder="Titolo della sezione"><button data-a="secup" data-s="${s.id}" title="Sposta su">↑</button><button data-a="secdn" data-s="${s.id}" title="Sposta giù">↓</button><button class="dang" data-a="secdel" data-s="${s.id}" title="Elimina la sezione">🗑</button></div>
+ <div class="blist">${s.blocks.map(b=>bRow(s,b)).join('')||'<div class="bempty">Sezione vuota: aggiungi un blocco qui sotto.</div>'}</div><div class="badd"><select data-addb="${s.id}">${ADDOPTS}</select></div></div>`}
+function renderStruct(){const o=S.opt,L=S.lega||LEGA;
+ $('#vStruct').innerHTML=`<div class="dv">
+ <div class="card"><h2>② Struttura del comunicato</h2><div class="hint" style="font-size:13.5px">Qui decidi <b>come è fatto</b> il comunicato: intestazione, sezioni, ordine dei blocchi e loro impostazioni. I testi e gli altri contenuti si scrivono nella scheda <b>③ Contenuti e anteprima</b>.</div></div>
+ <div class="card"><h3 class="ct3">Intestazione</h3><div class="hgrid"><img class="hlogo" src="${L}" alt=""><div class="frm4">
+  <label>Numero<input data-fi="num" value="${esc(S.num)}"></label><label>Data<input data-fi="data" value="${esc(S.data)}"></label><label>Stagione<input data-fi="stag" value="${esc(S.stag)}"></label>
+  <label class="full">Titolo<input data-hi="t" value="${esc(S.head.t)}"></label><label class="full">Sottotitolo / indirizzo<input data-hi="s" value="${esc(S.head.s)}"></label></div></div>
+  <div class="srow2"><label class="btn">🖼 Cambia logo della Lega<input id="lg0" type="file" accept="image/*" hidden></label><button data-a="logos">🛡 Loghi delle squadre…</button>
+  <span class="sepv"></span><label class="f inl">Stile tabelle <select data-so="tstyle"><option value="minimal"${o.tstyle!='classic'?' selected':''}>Minimal</option><option value="classic"${o.tstyle=='classic'?' selected':''}>Classico</option></select></label><label class="ck"><input type="checkbox" data-so="idx"${o.idx!==false?' checked':''}> Indice all’inizio</label><label class="ck"><input type="checkbox" data-so="pages"${o.pages?' checked':''}> Numero di pagina in fondo</label></div>
+  <div class="srow2"><button data-a="new">🗒 Nuovo comunicato…</button><button data-a="save" title="Scarica una copia di sicurezza (.json)">💾 Salva file</button><label class="btn">📂 Apri file<input id="op" type="file" accept=".json" hidden></label>${cloudOn()?'':'<span class="hint">In modalità locale il lavoro resta solo in questo browser: ogni tanto usa “Salva file”.</span>'}</div></div>
+ <div class="card"><h3 class="ct3">Sezioni e blocchi <span class="hint">l’ordine qui è l’ordine del PDF</span></h3>
+  ${S.secs.map(secPanel).join('')||'<p class="empty">Nessuna sezione.</p>'}
+  <div class="addsec"><button class="pri" data-a="secnew">+ Nuova sezione</button><span class="hint">oppure una sezione pronta:</span>${S.camps.length?`<span class="qsw"><select id="qsCamp">${S.camps.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select><button data-a="qs" data-k="camp" title="Risultati, classifica, marcatori, disciplina, recuperi e prossimo turno">🏟 Campionato</button></span>`:''}<button data-a="qs" data-k="txt">📢 Comunicazioni</button><button data-a="qs" data-k="social">📱 Social e QR</button><button data-a="qs" data-k="recruit">🤝 Collaboratori</button><button data-a="qs" data-k="sponsor">⭐ Sponsor</button></div></div></div>`}
 
-/* ---------------- scheda Dati ---------------- */
+/* ---------------- ① dati ---------------- */
 function recForm(c){const gs=giornate(c),K=Object.keys(c.rec);
  return`<div class="recf nt"><label class="f" style="flex:1 1 300px">Partita<select class="m" data-rf="m"><option value="">— scegli la partita da recuperare —</option>${gs.map(x=>`<optgroup label="${esc(gLabel(x.gl))}">${x.ms.map(m=>`<option value="${esc(mkey(m))}">${esc(fds(m.d))} · ${esc(m.h)} – ${esc(m.a)}${played(m)?' ('+m.res+')':''}</option>`).join('')}</optgroup>`).join('')}</select></label>
  <label class="f">Nuova data<input type="date" data-rf="nd"></label><label class="f">Ora<input type="time" data-rf="ora"></label><label class="f">Campo<input data-rf="st" list="stadiList" placeholder="sigla" size="7"></label><label class="f" style="flex:1 1 150px">Note<input data-rf="note" placeholder="es. rinviata per maltempo"></label><button class="pri" data-a="recadd" data-camp="${c.id}" style="margin-bottom:6px">🟨 Segna da recuperare</button>
@@ -442,24 +528,33 @@ function preview(c){const d=c.data,P=[];
  return P.length?P.map(partH).join(''):'<p class="empty">Ancora nessun dato.</p>'}
 function campCard(c){const d=c.data,u=c.upd,inDoc=S.secs.some(s=>s.blocks.some(b=>b.t=='live'&&b.camp==c.id)),l=lastG(c);
  const st=(k,lab,info)=>`<div class="st ${d[k]?'ok':'ko'}"><b>${d[k]?'✓':'○'} ${lab}</b>${d[k]?info+(u[k]?`<br><span style="color:var(--mut)">aggiornato ${esc(u[k])}</span>`:''):'non caricato'}</div>`;
- return`<div class="card" id="c-${c.id}"><div class="ch"><input class="nm" data-cf="name" data-camp="${c.id}" value="${esc(c.name)}" title="Clicca per rinominare"><span class="grow"></span>${inDoc?'<span class="badge">nel comunicato</span>':''}<button data-a="campsec" data-camp="${c.id}">➕ ${inDoc?'Aggiungi di nuovo la':'Inserisci la'} sezione nel comunicato</button><button class="dang" data-a="campdel" data-camp="${c.id}">Elimina</button></div>
+ return`<div class="card" id="c-${c.id}"><div class="ch"><input class="nm" data-cf="name" data-camp="${c.id}" value="${esc(c.name)}" title="Clicca per rinominare"><span class="grow"></span>${inDoc?'<span class="badge">nel comunicato</span>':'<span class="badge off">non usato nel comunicato</span>'}<button class="dang" data-a="campdel" data-camp="${c.id}">Elimina</button></div>
  <div class="stat">${st('cla','Classifica',d.cla?d.cla.rows.length+' squadre':'')}${st('mar','Marcatori',d.mar?d.mar.length+' giocatori':'')}${st('amm','Ammoniti',d.amm?d.amm.length+' giocatori · diffidati: '+d.amm.filter(r=>r[3]).length:'')}${st('squ','Squalificati',d.squ?d.squ.length+' giocatori':'')}${st('par','Calendario',d.par?d.par.length+' partite · ultima giocata: '+(l?l+'ª':'—'):'')}</div>
  <div class="cols2"><div class="box"><h4>📊 File Excel scaricati dal sito</h4><label class="drop" data-camp="${c.id}">Trascina qui i file Excel o clicca per sceglierli<br><small>Classifica · Marcatori · Ammoniti · Squalificati · Partite — vengono riconosciuti da soli</small><input type="file" multiple accept=".xlsx" hidden data-xl="${c.id}"></label></div>
  <div class="box"><h4>📅 Calendario e risultati (copia e incolla)</h4><textarea rows="4" data-cal="${c.id}" placeholder="Incolla qui il calendario copiato dal sito (Ctrl+V)"></textarea><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:4px"><button class="pri" data-a="calimp" data-camp="${c.id}">Importa calendario</button><a href="https://classifica.legaamatoricalciotreviso.it/CalendarioV4" target="_blank" rel="noopener" style="font-size:13px">Apri la pagina Calendario ↗</a></div><small>Sulla pagina del sito premi Ctrl+A e poi Ctrl+C; qui premi Ctrl+V. Le righe che non sono partite vengono ignorate.</small></div></div>
  ${MSG[c.id]?`<div class="cmsg${MSG[c.id].err?' err':''}">${esc(MSG[c.id].t)}</div>`:''}
- <div class="box" style="margin-top:12px"><h4>🔁 Partite da recuperare</h4><small style="margin:0 0 6px">La partita scelta viene evidenziata in giallo nei risultati, nella prossima giornata e nel blocco “Recuperi” del comunicato.</small>${recForm(c)}</div>
+ <div class="box" style="margin-top:12px"><h4>🔁 Partite da recuperare</h4><small style="margin:0 0 6px">La partita scelta viene evidenziata in giallo nei risultati, nel prossimo turno e nel blocco “Recuperi” del comunicato.</small>${recForm(c)}</div>
  <details class="prev"><summary>Vedi i dati caricati</summary>${preview(c)}</details></div>`}
-function renderData(){$('#vData').innerHTML=`<div class="dv"><div class="card"><h2>① Dati dei campionati</h2><div class="hint" style="font-size:13.5px">Qui carichi soltanto i dati. Nella scheda <b>② Componi comunicato</b> i blocchi automatici (risultati, classifica, marcatori, disciplina, prossima giornata, recuperi) si aggiornano da soli.</div>
- <div class="guide"><div><b>1 · Crea i campionati</b><br>Uno per ogni girone o serie che compare nel comunicato.</div><div><b>2 · Excel dal sito</b><br>Scarica Classifica, Marcatori, Ammoniti e Squalificati e trascinali nel riquadro del campionato.</div><div><b>3 · Calendario</b><br>Apri la pagina Calendario del sito, Ctrl+A e Ctrl+C, poi incolla nel riquadro.</div><div><b>4 · Componi</b><br>Passa alla scheda ②, controlla, aggiungi i testi e scarica il PDF.</div></div>
+function renderData(){$('#vData').innerHTML=`<div class="dv"><div class="card"><h2>① Dati dei campionati</h2><div class="hint" style="font-size:13.5px">Qui carichi soltanto i dati. I blocchi automatici del comunicato (risultati, classifica, marcatori, disciplina, prossimo turno, recuperi) si aggiornano da soli.</div>
+ <div class="guide"><div><b>1 · Crea i campionati</b><br>Uno per ogni girone o serie. La sua sezione viene aggiunta al comunicato.</div><div><b>2 · Excel dal sito</b><br>Scarica Classifica, Marcatori, Ammoniti e Squalificati e trascinali nel riquadro del campionato.</div><div><b>3 · Calendario</b><br>Apri la pagina Calendario del sito, Ctrl+A e Ctrl+C, poi incolla nel riquadro.</div><div><b>4 · Struttura e contenuti</b><br>In ② scegli sezioni e ordine, in ③ scrivi i testi; poi ⬇ Esporta PDF.</div></div>
  <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap"><input id="ncName" placeholder="Nome del campionato (es. Serie A – lunedì)" style="flex:1;min-width:240px"><button class="pri" data-a="campadd">+ Aggiungi campionato</button></div></div>
  ${S.camps.map(campCard).join('')||'<div class="card empty-c">Nessun campionato: aggiungine uno qui sopra.</div>'}</div>`}
-function renderTop(){$('#tabs').innerHTML=[['data','① Dati campionati'],['doc','② Componi comunicato']].map(([k,l])=>`<button data-a="tab" data-v="${k}" class="${TAB==k?'on':''}">${l}</button>`).join('');
- $('#topR').innerHTML=(cloudOn()?`<button data-a="presets">📁 Preset</button>${FB.prof.role=='admin'?'<button data-a="users">👥 Utenti</button>':''}<span class="chip" title="${esc(FB.user.email)}">👤 ${esc(FB.prof.name||FB.user.email)}${FB.prof.role=='admin'?' · admin':''}</span><button data-a="logout">Esci</button>`:`<span class="chip" title="${FIREBASE_CONFIG?'Accesso non effettuato':'Firebase non ancora configurato (vedi GUIDA_FIREBASE.md)'}">💾 Modalità locale</span>`)+`<button class="pri" data-a="pdf">⬇ PDF</button>`}
+
+/* ---------------- barra e rendering ---------------- */
+const TABS=[['data','① Dati campionati'],['struct','② Struttura'],['doc','③ Contenuti e anteprima']];
+function renderTop(){$('#tabs').innerHTML=TABS.map(([k,l])=>`<button data-a="tab" data-v="${k}" class="${TAB==k?'on':''}">${l}</button>`).join('');
+ $('#topR').innerHTML=(cloudOn()?`<button data-a="presets">📁 Preset</button>${FB.prof.role=='admin'?'<button data-a="users">👥 Utenti</button>':''}<span class="chip" title="${esc(FB.user.email)}">👤 ${esc(FB.prof.name||FB.user.email)}${FB.prof.role=='admin'?' · admin':''}</span><button data-a="logout">Esci</button>`:`<span class="chip" title="${FIREBASE_CONFIG?'Accesso non effettuato':'Firebase non configurato (vedi GUIDA_FIREBASE.md)'}">💾 Modalità locale</span>`)+`<button class="pri" data-a="pdf">⬇ Esporta PDF</button>`}
 function focusKey(el){const d=el.dataset,ks=Object.keys(d);if(!ks.length)return el.id?'#'+CSS.escape(el.id):null;return el.tagName.toLowerCase()+ks.map(k=>`[data-${k.replace(/[A-Z]/g,m=>'-'+m.toLowerCase())}="${CSS.escape(d[k])}"]`).join('')}
-function render(){const ae=document.activeElement,key=ae&&ae!==document.body&&ae.matches&&ae.matches('input:not([type=file]),select,textarea')?focusKey(ae):null;
- document.body.classList.toggle('mdoc',TAB=='doc');$('#vData').hidden=TAB!='data';$('#vDoc').hidden=TAB!='doc';$('#tlogo').src=S.lega||LEGA;
- renderTop();if(TAB=='data')renderData();else{renderDoc();renderSide()}
+let FOCUS=null;
+function render(){const ae=document.activeElement,key=FOCUS||(ae&&ae!==document.body&&ae.matches&&ae.matches('input:not([type=file]),select,textarea')?focusKey(ae):null);FOCUS=null;
+ if(!TABS.some(x=>x[0]==TAB))TAB='doc';
+ document.body.classList.toggle('mdoc',TAB=='doc');document.body.classList.toggle('tclassic',S.opt.tstyle=='classic');
+ $('#vData').hidden=TAB!='data';$('#vStruct').hidden=TAB!='struct';$('#vDoc').hidden=TAB!='doc';$('#tlogo').src=S.lega||LEGA;
+ renderTop();if(TAB=='data')renderData();else if(TAB=='struct')renderStruct();else renderDoc();
  if(key){const el=$(key);if(el&&el!==ae){el.focus({preventScroll:true});if(el.setSelectionRange&&/^(text|search|url|email|tel)$/.test(el.type))try{const n=el.value.length;el.setSelectionRange(n,n)}catch(x){}}}}
+const goTab=(t,after)=>{TAB=t;try{localStorage.lact_tab=TAB}catch(x){}render();if(after)setTimeout(after,30);else scrollTo(0,0)};
+const scrollToEl=el=>{if(el)scrollTo({top:el.getBoundingClientRect().top+scrollY-70,behavior:'smooth'})};
+const flash=el=>{if(!el)return;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash')};
 
 /* ---------------- finestre ---------------- */
 function ask(title,def='',ph=''){return new Promise(res=>{const D=$('#ask');D.innerHTML=`<h3>${esc(title)}</h3><input id="askI" style="width:100%" value="${esc(def)}" placeholder="${esc(ph)}"><div class="right"><button id="askN">Annulla</button> <button class="pri" id="askY">OK</button></div>`;let done=false;const fin=v=>{if(done)return;done=true;D.close();res(v)};
@@ -474,27 +569,37 @@ function newDlg(){const D=$('#dlg'),dp=cloudOn()&&localStorage.lact_defp;D.inner
  <button data-a="newgo" data-k="blank"><b>▫ Comunicato vuoto</b><small>Riparte da zero: restano solo i loghi.</small></button></div><div class="right"><button data-a="dlgclose">Annulla</button></div>`;if(!D.open)D.showModal()}
 async function newGo(k){const D=$('#dlg');
  if(k=='next'){S.num=String((+S.num||0)+1);S.data=todayDots();E={};D.close();toast('Comunicato n. '+S.num+': ricorda di ricaricare dati e calendario aggiornati.')}
- else if(k=='blank'){if(!confirm('Svuotare tutto e ripartire da zero? (Prima puoi usare “Salva file”.)'))return;const n=DEF();n.logos=S.logos;n.lega=S.lega;n.stag=S.stag;n.num=String((+S.num||0)+1);S=n;E={};D.close()}
+ else if(k=='blank'){if(!confirm('Svuotare tutto e ripartire da zero? (Prima puoi usare “Salva file”.)'))return;const n=DEF();n.logos=S.logos;n.lega=S.lega;n.stag=S.stag;n.opt=S.opt;n.num=String((+S.num||0)+1);S=n;E={};D.close()}
  else if(k=='preset'){const dp=localStorage.lact_defp;if(dp){try{const p=await cloudPresetGet(dp);if(p){applyPreset(p,true);D.close()}else{localStorage.removeItem('lact_defp');presetsDlg()}}catch(x){toast(authErr(x),1)}}else presetsDlg();return}
  save();render()}
 function saveFile(){const u=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:'application/json'})),l=document.createElement('a');l.href=u;l.download='comunicato_'+S.num+'.json';document.body.append(l);l.click();l.remove();setTimeout(()=>URL.revokeObjectURL(u),2000)}
-async function doPDF(){const old=E;E={};if(TAB!='doc')TAB='doc';render();const name='Comunicato_Ufficiale_'+S.num+'_'+String(S.data).replace(/[\/.\s]+/g,'-');document.title=name;
- try{await new Promise(r=>setTimeout(r,80));if(window.lact&&window.lact.pdf)await window.lact.pdf(name);else print()}catch(x){toast('PDF non creato: '+(x.message||x),1)}finally{document.title='Comunicati LACT';E=old;render()}}
-function addQuick(k){let s;if(k=='camp'){const c=camp($('#qsCamp').value);if(!c)return;s=campSection(c)}else s={id:uid(),title:SECDEF[k],blocks:k=='empty'?[]:[{id:uid(),...NB[k]()}]};
- S.secs.push(s);if(k=='empty')E[s.id]=1;s.blocks.forEach(b=>{if(b.t!='live')E[b.id]=1});setTimeout(()=>{const el=$('#s-'+s.id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})},60);toast('Sezione aggiunta in fondo al comunicato.')}
+function pdfTip(){return new Promise(res=>{let skip=false;try{skip=localStorage.lact_pdftip=='1'}catch(x){}if(skip||(window.lact&&window.lact.pdf))return res(true);
+ const D=$('#ask');D.innerHTML=`<h3>Prima di salvare il PDF</h3><ol class="tip"><li>In <b>Destinazione</b> scegli <b>Salva come PDF</b> (non “Microsoft Print to PDF”): così l’indice e i link restano cliccabili.</li><li>In <b>Altre impostazioni</b> lascia attiva <b>Grafica di sfondo</b>.</li><li>Le scritte del browser in alto e in basso non compaiono più (con Chrome o Edge aggiornati).</li></ol><label class="ck"><input type="checkbox" id="tipNo"> Non mostrarlo più</label><div class="right"><button id="tipN">Annulla</button> <button class="pri" id="tipY">Continua</button></div>`;
+ let done=false;const fin=v=>{if(done)return;done=true;if(v&&$('#tipNo').checked)try{localStorage.lact_pdftip='1'}catch(x){}D.close();res(v)};$('#tipY').onclick=()=>fin(true);$('#tipN').onclick=()=>fin(false);D.onclose=()=>fin(false);D.showModal()})}
+async function doPDF(){if(!await pdfTip())return;const old=E,ot=TAB;E={};TAB='doc';render();const name='Comunicato_Ufficiale_'+S.num+'_'+String(S.data).replace(/[\/.\s]+/g,'-');document.title=name;
+ try{await new Promise(r=>setTimeout(r,120));if(window.lact&&window.lact.pdf)await window.lact.pdf(name);else print()}catch(x){toast('PDF non creato: '+(x.message||x),1)}finally{document.title='Comunicati LACT';E=old;TAB=ot;render()}}
+function addQuick(k){let s;if(k=='camp'){const c=camp($('#qsCamp').value);if(!c)return;s=campSection(c)}else s={id:uid(),title:SECDEF[k],blocks:[{id:uid(),...NB[k]()}]};
+ S.secs.push(s);s.blocks.forEach(b=>{if(b.t!='live')E[b.id]=1});return s}
+function moveBlock(bid,sid){const[s,b]=fb(bid),t=sec(sid);if(!s||!t||s===t)return;s.blocks=s.blocks.filter(x=>x!==b);t.blocks.push(b);toast(`Blocco spostato in “${t.title}”.`);FOCUS=null;setTimeout(()=>flash($('#r-'+b.id)),40)}
 
 /* ---------------- eventi ---------------- */
 function applyField(t){const d=t.dataset;
  if(d.bi){const[,b]=fb(d.b),it=b&&b.items.find(i=>i.id==d.item);if(!it)return false;it[d.bi]=val(t)}
- else if(d.bp){const[,b]=fb(d.b);if(!b)return false;b[d.bp]=d.bp=='roles'?t.value.split('\n').map(x=>x.trim()).filter(Boolean):d.bp=='cols'?+t.value:val(t)}
+ else if(d.bp){const[,b]=fb(d.b);if(!b)return false;const v=val(t);b[d.bp]=d.bp=='roles'?t.value.split('\n').map(x=>x.trim()).filter(Boolean):d.bp=='cols'?(isNaN(+v)?v:+v):v}
  else if(d.fi)S[d.fi]=t.value;
+ else if(d.hi)S.head[d.hi]=t.value;
+ else if(d.so)S.opt[d.so]=val(t);
+ else if(d.st){const s=sec(d.s);if(!s)return false;s[d.st]=t.value}
  else if(d.cf){const c=camp(d.camp);if(!c)return false;c[d.cf]=t.value}
  else return false;save();return true}
 document.addEventListener('mousedown',e=>{if(e.target.closest('[data-a=rt],[data-a=rtpop],[data-a=rtlink]'))e.preventDefault()});
 document.addEventListener('click',async e=>{if(!e.target.closest('.pw'))$$('.pop').forEach(p=>p.hidden=true);
  const t=e.target.closest('[data-a]');if(!t)return;const d=t.dataset,a=d.a,[s0,b]=d.b?fb(d.b):[],s=d.s?sec(d.s):s0,c=d.camp?camp(d.camp):null;
  switch(a){
- case'tab':TAB=d.v;try{localStorage.lact_tab=TAB}catch(x){}render();scrollTo(0,0);return;
+ case'tab':goTab(d.v);return;
+ case'goto':e.preventDefault();scrollToEl(d.s=='top'?$('#s-top'):$('#s-'+d.s));return;
+ case'bset':if(OPEN.has(d.b))OPEN.delete(d.b);else OPEN.add(d.b);render();return;
+ case'goset':OPEN.add(d.b);goTab('struct',()=>{const r=$('#r-'+d.b);scrollToEl(r);flash(r)});return;
  case'rt':rtExec(d.c,d.v);return;
  case'rtpop':{const p=t.parentElement.querySelector('.pop'),o=p.hidden;$$('.pop').forEach(x=>x.hidden=true);p.hidden=!o;return}
  case'rtlink':rtLink();return;
@@ -518,22 +623,21 @@ document.addEventListener('click',async e=>{if(!e.target.closest('.pw'))$$('.pop
  case'ureset':userReset(d.email);return;
  case'logout':cloudLogout();return;
  case'reset':cloudReset();return;
- case'recedit':{const f=t.closest('.card,.blk').querySelector('.recf'),r=c.rec[d.k]||{};f.querySelector('[data-rf=m]').value=d.k;['nd','ora','st','note'].forEach(k=>f.querySelector(`[data-rf=${k}]`).value=r[k]||'');f.querySelector('[data-rf=nd]').focus();return}
+ case'recedit':{const f=t.closest('.card').querySelector('.recf'),r=c.rec[d.k]||{};f.querySelector('[data-rf=m]').value=d.k;['nd','ora','st','note'].forEach(k=>f.querySelector(`[data-rf=${k}]`).value=r[k]||'');f.querySelector('[data-rf=nd]').focus();return}
  case'recadd':{const f=t.closest('.recf'),g=n=>f.querySelector(`[data-rf=${n}]`).value.trim(),k=g('m');if(!k){toast('Scegli prima la partita dal menu a tendina.');return}
   c.rec[k]={nd:g('nd'),ora:g('ora'),st:g('st').toUpperCase(),note:g('note')};toast('Partita segnata da recuperare: è evidenziata in giallo nel comunicato.');break}
  case'recdel':delete c.rec[d.k];break;
- case'campadd':{const n=$('#ncName').value.trim();if(!n){toast('Scrivi il nome del campionato.');$('#ncName').focus();return}const nc={id:uid(),name:n,data:{},upd:{},rec:{}};S.camps.push(nc);S.secs.push(campSection(nc));toast('Campionato creato: ho aggiunto anche la sua sezione al comunicato.');break}
+ case'campadd':{const n=$('#ncName').value.trim();if(!n){toast('Scrivi il nome del campionato.');$('#ncName').focus();return}const nc={id:uid(),name:n,data:{},upd:{},rec:{}};S.camps.push(nc);S.secs.push(campSection(nc));toast('Campionato creato: la sua sezione è stata aggiunta al comunicato (la sposti in ② Struttura).');break}
  case'campdel':if(!confirm(`Eliminare il campionato “${c.name}” con tutti i suoi dati? I blocchi automatici collegati resteranno vuoti.`))return;S.camps=S.camps.filter(x=>x!==c);break;
- case'campsec':S.secs.push(campSection(c));toast('Sezione aggiunta in fondo al comunicato.');break;
  case'calimp':calImport(c,$(`[data-cal="${c.id}"]`).value);break;
  case'pen':E[d.i]=!E[d.i];break;
- case'up':case'dn':mv(s.blocks,s.blocks.indexOf(b),a=='up'?-1:1);break;
- case'del':if(!confirm('Eliminare questo blocco?'))return;s.blocks=s.blocks.filter(k=>k!==b);break;
+ case'up':case'dn':mv(s.blocks,s.blocks.indexOf(b),a=='up'?-1:1);save();render();flash($('#r-'+b.id));return;
+ case'del':if(!confirm(`Eliminare il blocco “${(BL[bkey(b)]||['',''])[1]}”?`))return;s.blocks=s.blocks.filter(k=>k!==b);break;
  case'snap':snap(s,b);break;
- case'tauto':b.title='';break;
- case'secup':case'secdn':mv(S.secs,S.secs.indexOf(s),a=='secup'?-1:1);break;
+ case'secnew':{const n={id:uid(),title:'Nuova sezione',blocks:[]};S.secs.push(n);FOCUS=`#ss-${n.id} input.st`;save();render();const el=$('#ss-'+n.id);scrollToEl(el);flash(el);setTimeout(()=>{const i=$(`#ss-${n.id} input.st`);if(i)i.select()},60);toast('Sezione creata in fondo: dagli un titolo e aggiungi i blocchi.');return}
+ case'secup':case'secdn':mv(S.secs,S.secs.indexOf(s),a=='secup'?-1:1);save();render();flash($('#ss-'+s.id));return;
  case'secdel':if(!confirm(`Eliminare la sezione “${s.title}” con tutto il suo contenuto?`))return;S.secs.splice(S.secs.indexOf(s),1);break;
- case'qs':addQuick(d.k);break;
+ case'qs':{const n=addQuick(d.k);if(!n)return;save();render();const el=$('#ss-'+n.id);scrollToEl(el);flash(el);toast('Sezione aggiunta in fondo.');return}
  case'addrow':b.rows.push(b.cols.map(()=>''));break;
  case'delrow':b.rows.splice(+d.r,1);(b.hl||[]).splice(+d.r,1);break;
  case'hlrow':b.hl=b.hl||[];b.hl[+d.r]=!b.hl[+d.r];break;
@@ -542,15 +646,12 @@ document.addEventListener('click',async e=>{if(!e.target.closest('.pw'))$$('.pop
  case'itadd':b.items.push(b.t=='social'?{id:uid(),k:'alt',label:'',url:''}:{id:uid(),img:'',name:'',text:'',url:''});break;
  case'itdel':b.items=b.items.filter(i=>i.id!=d.item);break;
  case'itup':case'itdn':mv(b.items,b.items.findIndex(x=>x.id==d.item),a=='itup'?-1:1);break;
- case'itimgdel':b.items.find(x=>x.id==d.item).img='';break;
  default:return}
  save();render()});
 document.addEventListener('input',e=>{const t=e.target,d=t.dataset||{};if(t.matches&&t.matches('input,select,textarea')){applyField(t);return}
- if(d.f)S[d.f]=t.textContent;else if(d.hf)S.head[d.hf]=t.textContent;else if(d.sf){const s=sec(d.s);if(s)s.title=t.textContent}
- else if(d.bf){const[,b]=fb(d.b);if(!b)return;b[d.bf]=d.bf=='html'?t.innerHTML:t.textContent}
+ if(d.bf){const[,b]=fb(d.b);if(!b)return;b[d.bf]=d.bf=='html'?t.innerHTML:t.textContent}
  else if(d.col!=null&&d.r!=null){const[,b]=fb(d.b);if(b)b.rows[d.r][d.col]=t.textContent}
  else if(d.h!=null){const[,b]=fb(d.b);if(b)b.cols[d.h].h=t.textContent}else return;save()});
-document.addEventListener('focusout',e=>{const d=e.target.dataset;if(d&&(d.sf||d.f))setTimeout(()=>{if(!document.activeElement||!document.activeElement.isContentEditable)render()},0)});
 document.addEventListener('keydown',e=>{const t=e.target;if(e.key=='Enter'&&t.isContentEditable&&!t.closest('.txt')){e.preventDefault();t.blur()}});
 document.addEventListener('paste',e=>{const t=e.target.closest?e.target.closest('[contenteditable=true]'):null;if(!t)return;
  if(!t.classList.contains('txt')){e.preventDefault();document.execCommand('insertText',false,e.clipboardData.getData('text').replace(/\s+/g,' '));return}
@@ -558,17 +659,20 @@ document.addEventListener('paste',e=>{const t=e.target.closest?e.target.closest(
 const hasFiles=e=>e.dataTransfer&&[...e.dataTransfer.types].includes('Files');
 window.addEventListener('dragover',e=>{if(!hasFiles(e))return;e.preventDefault();const z=e.target.closest&&e.target.closest('.drop[data-camp]');$$('.drop.ov').forEach(x=>x!==z&&x.classList.remove('ov'));if(z)z.classList.add('ov')});
 window.addEventListener('drop',e=>{if(!hasFiles(e))return;e.preventDefault();const z=e.target.closest&&e.target.closest('.drop[data-camp]');$$('.drop.ov').forEach(x=>x.classList.remove('ov'));if(z)impFiles(camp(z.dataset.camp),[...e.dataTransfer.files])});
+const prettyName=f=>f.replace(/\.[^.]+$/,'').replace(/[_\-]+/g,' ').replace(/\s+/g,' ').trim();
 document.addEventListener('change',async e=>{const t=e.target,d=t.dataset;
- if(d.addb!=null){const s=sec(d.addb),v=t.value;if(!s||!v)return;let b;if(v.startsWith('live:')){const ex=s.blocks.find(x=>x.t=='live'&&camp(x.camp));b=NB.live(v.slice(5),ex?ex.camp:(S.camps[0]||{}).id)}else b=NB[v]();b.id=uid();s.blocks.push(b);if(b.t!='live'||!b.camp)E[b.id]=1;save();render();return}
+ if(d.addb!=null){const s=sec(d.addb),v=t.value;if(!s||!v)return;let b;if(v.startsWith('live:')){const ex=s.blocks.find(x=>x.t=='live'&&camp(x.camp));b=NB.live(v.slice(5),ex?ex.camp:(S.camps[0]||{}).id)}else b=NB[v]();b.id=uid();s.blocks.push(b);if(b.t!='live')E[b.id]=1;if(b.t!='txt')OPEN.add(b.id);save();render();flash($('#r-'+b.id));toast(b.t=='live'?'Blocco aggiunto: si compila da solo con i dati.':'Blocco aggiunto: scrivi il contenuto nella scheda ③.');return}
+ if(d.mvb){if(t.value)moveBlock(d.mvb,t.value);save();render();return}
  if(d.o){const[,b]=fb(d.b);if(!b)return;if(d.o=='camp')b.camp=t.value;else b.opt[d.o]=val(t);save();render();return}
  if(d.urole){userSet(d.urole,{role:t.value});return}
  if(d.rtc){rtExec(d.rtc,t.value);return}
- if(d.bp||d.bi||d.fi||d.cf){applyField(t);setTimeout(render,0);return}
+ if(d.bp||d.bi||d.fi||d.cf||d.hi||d.so||d.st){applyField(t);setTimeout(render,0);return}
  const f=t.files&&t.files[0];if(!f)return;
  try{if(d.xl)await impFiles(camp(d.xl),[...t.files]);
   else if(t.id=='lg0'){S.lega=await imgData(f,600,1);save();if(cloudOn())await cloudLega(S.lega);render()}
   else if(t.id=='op'){const o=JSON.parse(await f.text());if(!o||!Array.isArray(o.secs))throw new Error('file non valido');S=mig(o);E={};save();render();toast('Comunicato aperto.')}
-  else if(d.spimg){const[,b]=fb(d.b),it=b&&b.items.find(i=>i.id==d.spimg);if(it){it.img=await imgData(f,900);save();render()}}
+  else if(d.spimg){const[,b]=fb(d.b),it=b&&b.items.find(i=>i.id==d.spimg);if(it){it.img=await imgData(f,600);if(!it.name)it.name=prettyName(f.name);save();render()}}
+  else if(d.spbulk){const[,b]=fb(d.spbulk);if(b){for(const g of t.files)b.items.push({id:uid(),img:await imgData(g,600),name:prettyName(g.name),text:'',url:''});save();render();toast(t.files.length+' sponsor aggiunti.')}}
   else if(d.t){await setLogo(d.t,await imgData(f,96,1));render();logosDlg()}
   else if(d.bulk){for(const g of t.files)await setLogo(g.name.replace(/\.[^.]+$/,''),await imgData(g,96,1));render();logosDlg();toast(t.files.length+' loghi caricati.')}
  }catch(x){toast('Errore: '+(x.message||x),1)}t.value=''});
